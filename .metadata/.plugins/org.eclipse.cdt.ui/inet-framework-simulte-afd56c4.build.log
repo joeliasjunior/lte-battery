@@ -1,516 +1,458 @@
-00:32:55 **** Build of configuration gcc-debug for project inet-framework-simulte-afd56c4 ****
+01:45:36 **** Incremental Build of configuration gcc-debug for project inet-framework-simulte-afd56c4 ****
 make MODE=debug CONFIGNAME=gcc-debug -j4 all 
 cd src && make
 make[1]: Entering directory '/home/joelias/Dropbox/UFF/Pesquisa/lte-battery/inet-framework-simulte-afd56c4/src'
-MSGC: apps/alert/AlertPacket.msg
-MSGC: apps/voip/VoipPacket.msg
-MSGC: apps/vod/M1Message.msg
-MSGC: apps/vod/VoDPacket.msg
 common/lterecorder.cc
-MSGC: common/LteControlInfo.msg
-MSGC: common/timer/TMultiTimerMsg.msg
-MSGC: common/timer/TTimerMsg.msg
-corenetwork/binder/LteBinder.cc
-corenetwork/binder/PhyPisaData.cc
-corenetwork/deployer/LteDeployer.cc
-corenetwork/lteip/InternetQueue.cc
-corenetwork/lteip/LteIp.cc
-MSGC: x2/packet/LteX2Message.msg
-MSGC: x2/packet/X2ControlInfo.msg
-corenetwork/nodes/InternetMux.cc
-corenetwork/nodes/UnUuMux.cc
-corenetwork/nodes/ExtCell.cc
-epc/gtp_common.cc
-epc/TrafficFlowFilter.cc
-epc/TrafficFlowFilterSimplified.cc
-epc/gtp/TftControlInfo.cc
-MSGC: epc/gtp/GtpUserMsg.msg
-stack/compManager/LteCompManagerBase.cc
-stack/compManager/compManagerProportional/LteCompManagerProportional.cc
-MSGC: stack/d2dModeSelection/D2DModeSwitchNotification.msg
-stack/d2dModeSelection/d2dModeSelectionBestCqi/D2DModeSelectionBestCqi.cc
-epc/TrafficFlowFilterSimplified.cc: In member function 'EpcNodeType TrafficFlowFilterSimplified::selectOwnerType(const char*)':
-epc/TrafficFlowFilterSimplified.cc:41:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-stack/handoverManager/LteHandoverManager.cc
-stack/mac/allocator/LteAllocationModule.cc
-stack/mac/amc/LteAmc.cc
-stack/mac/amc/AmcPilotAuto.cc
-stack/mac/amc/LteMcs.cc
-stack/mac/amc/AmcPilotAuto.cc: In member function 'virtual const UserTxParams& AmcPilotAuto::computeTxParams(MacNodeId, Direction)':
-stack/mac/amc/AmcPilotAuto.cc:81:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-             for(; bandIt < usableB->size(); ++bandIt)
-                          ^
-stack/mac/amc/AmcPilotAuto.cc:122:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-             for(; bandIt < usableB->size(); ++bandIt)
-                          ^
-stack/mac/amc/AmcPilotAuto.cc: In member function 'virtual void AmcPilotAuto::setUsableBands(MacNodeId, UsableBands)':
-stack/mac/amc/AmcPilotAuto.cc:181:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     for(int i = 0 ; i<usableBands.size() ; ++i)
-                      ^
-In file included from stack/mac/amc/LteAmc.cc:15:0:
-stack/mac/amc/AmcPilotD2D.h: In member function 'virtual std::vector<short unsigned int> AmcPilotD2D::getMultiBandCqi(MacNodeId, Direction)':
-stack/mac/amc/AmcPilotD2D.h:54:82: warning: no return statement in function returning non-void [-Wreturn-type]
-     virtual std::vector<Cqi>  getMultiBandCqi(MacNodeId id, const Direction dir){}
-                                                                                  ^
-stack/mac/amc/AmcPilotD2D.h: In member function 'virtual UsableBands* AmcPilotD2D::getUsableBands(MacNodeId)':
-stack/mac/amc/AmcPilotD2D.h:56:55: warning: no return statement in function returning non-void [-Wreturn-type]
-     virtual UsableBands* getUsableBands(MacNodeId id){}
-                                                       ^
-stack/mac/amc/AmcPilotD2D.cc
-In file included from stack/mac/amc/AmcPilotD2D.cc:10:0:
-stack/mac/amc/AmcPilotD2D.h: In member function 'virtual std::vector<short unsigned int> AmcPilotD2D::getMultiBandCqi(MacNodeId, Direction)':
-stack/mac/amc/AmcPilotD2D.h:54:82: warning: no return statement in function returning non-void [-Wreturn-type]
-     virtual std::vector<Cqi>  getMultiBandCqi(MacNodeId id, const Direction dir){}
-                                                                                  ^
-stack/mac/amc/AmcPilotD2D.h: In member function 'virtual UsableBands* AmcPilotD2D::getUsableBands(MacNodeId)':
-stack/mac/amc/AmcPilotD2D.h:56:55: warning: no return statement in function returning non-void [-Wreturn-type]
-     virtual UsableBands* getUsableBands(MacNodeId id){}
-                                                       ^
-stack/mac/amc/LteAmc.cc: In member function 'MacNodeId LteAmc::computeMuMimoPairing(MacNodeId, Direction)':
-stack/mac/amc/LteAmc.cc:511:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-MSGC: stack/rlc/packet/LteRlcPdu.msg
-stack/mac/buffer/LteMacBuffer.cc
-MSGC: stack/mac/packet/LteMacPdu.msg
-MSGC: stack/mac/packet/LteHarqFeedback.msg
-stack/mac/buffer/harq/LteHarqProcessTx.cc
-stack/mac/buffer/harq/LteHarqBufferRx.cc
-stack/mac/buffer/harq_d2d/LteHarqProcessRxD2D.cc
-stack/mac/buffer/harq_d2d/LteHarqProcessRxD2DMirror.cc
-stack/mac/buffer/harq_d2d/LteHarqBufferRxD2D.cc
-stack/mac/buffer/harq_d2d/LteHarqBufferTxD2D.cc
-stack/mac/buffer/harq_d2d/LteHarqProcessTxD2D.cc
-stack/mac/buffer/harq_d2d/LteHarqBufferRxD2DMirror.cc
-stack/mac/buffer/harq_d2d/LteHarqUnitTxD2D.cc
-stack/mac/layer/LteMacBase.cc
-stack/mac/layer/LteMacRelayEnb.cc
-MSGC: stack/mac/packet/LteSchedulingGrant.msg
-MSGC: stack/phy/packet/LteFeedbackPkt.msg
-MSGC: stack/mac/packet/LteRac.msg
-MSGC: stack/mac/packet/LteMacSduRequest.msg
-stack/mac/layer/LteMacRelayUe.cc
-stack/mac/layer/LteMacBase.cc: In member function 'virtual void LteMacBase::deleteQueues(MacNodeId)':
-stack/mac/layer/LteMacBase.cc:238:40: warning: 'bool omnetpp::cQueue::empty() const' is deprecated (declared at /home/joelias/omnetpp-5.0/include/omnetpp/cqueue.h:298) [-Wdeprecated-declarations]
-             while (!mit->second->empty())
-                                        ^
-stack/mac/layer/LteMacEnb.cc
-MSGC: stack/phy/packet/AirFrame.msg
-MSGC: stack/phy/packet/LteAirFrame.msg
-stack/mac/layer/LteMacEnbD2D.cc
-stack/mac/layer/LteMacUeD2D.cc
-stack/mac/scheduler/LcgSchedulerRealistic.cc
-stack/mac/scheduler/LcgSchedulerRealistic.cc:196:90: warning: "/*" within comment [-Wcomment]
-                 if ((toServe <= availableBytes) /*&& ( !priorityService || ( sduSize <= 0/*TODO desc->parameters_.bucket_) )*/)
- ^
-stack/mac/scheduler/LcgSchedulerRealistic.cc: In member function 'virtual ScheduleList& LcgSchedulerRealistic::schedule(unsigned int, Direction)':
-stack/mac/scheduler/LcgSchedulerRealistic.cc:38:15: warning: variable 'timeInterval' set but not used [-Wunused-but-set-variable]
-     simtime_t timeInterval = NOW - lastExecutionTime_;
-               ^
-stack/mac/scheduler/LcgSchedulerRealistic.cc:42:9: warning: unused variable 'lowestBackloggedFlow' [-Wunused-variable]
-     int lowestBackloggedFlow = -1;
-         ^
-stack/mac/scheduler/LcgSchedulerRealistic.cc:43:9: warning: unused variable 'lowestBackloggedPriority' [-Wunused-variable]
-     int lowestBackloggedPriority = -1;
-         ^
-stack/mac/scheduler/LcgSchedulerRealistic.cc:47:9: warning: unused variable 'highestBackloggedFlow' [-Wunused-variable]
-     int highestBackloggedFlow = -1;
-         ^
-stack/mac/scheduler/LcgSchedulerRealistic.cc:48:9: warning: unused variable 'highestBackloggedPriority' [-Wunused-variable]
-     int highestBackloggedPriority = -1;
-         ^
-stack/mac/layer/LteMacEnb.cc: In member function 'virtual void LteMacEnb::sendGrants(LteMacScheduleList*)':
-stack/mac/layer/LteMacEnb.cc:354:20: warning: unused variable 'lcid' [-Wunused-variable]
-         LogicalCid lcid = MacCidToLcid(cid);
-                    ^
-In file included from stack/mac/layer/LteMacEnbD2D.cc:23:0:
-stack/mac/amc/AmcPilotD2D.h: In member function 'virtual std::vector<short unsigned int> AmcPilotD2D::getMultiBandCqi(MacNodeId, Direction)':
-stack/mac/amc/AmcPilotD2D.h:54:82: warning: no return statement in function returning non-void [-Wreturn-type]
-     virtual std::vector<Cqi>  getMultiBandCqi(MacNodeId id, const Direction dir){}
-                                                                                  ^
-stack/mac/amc/AmcPilotD2D.h: In member function 'virtual UsableBands* AmcPilotD2D::getUsableBands(MacNodeId)':
-stack/mac/amc/AmcPilotD2D.h:56:55: warning: no return statement in function returning non-void [-Wreturn-type]
-     virtual UsableBands* getUsableBands(MacNodeId id){}
-                                                       ^
-stack/mac/layer/LteMacUeD2D.cc: In member function 'virtual void LteMacUeD2D::macPduMake(LteMacScheduleList*)':
-stack/mac/layer/LteMacUeD2D.cc:431:43: warning: 'bool omnetpp::cQueue::empty() const' is deprecated (declared at /home/joelias/omnetpp-5.0/include/omnetpp/cqueue.h:298) [-Wdeprecated-declarations]
-                 if (mbuf_[destCid]->empty())
-                                           ^
-stack/mac/layer/LteMacUeD2D.cc: In member function 'void LteMacUeD2D::macHandleD2DModeSwitch(omnetpp::cPacket*)':
-stack/mac/layer/LteMacUeD2D.cc:666:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-                         for (int proc = 0; proc < (unsigned int) UE_TX_HARQ_PROCESSES; proc++)
-                                                 ^
-stack/mac/layer/LteMacUeD2D.cc:714:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
-         MacCid cid;
-                ^
-stack/mac/scheduler/LteSchedulerUeUl.cc
-stack/mac/scheduler/LteSchedulerEnb.cc
-stack/mac/scheduler/LteSchedulerEnbDl.cc
-stack/mac/scheduler/LcgScheduler.cc
-stack/mac/scheduler/LteSchedulerEnbDlRealistic.cc
-In file included from stack/mac/scheduler/LteSchedulerEnb.cc:12:0:
-stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
-stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
-         MacCid cid;
-                ^
-In file included from stack/mac/scheduler/LteSchedulerEnbDl.cc:12:0:
-stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
-stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
-         MacCid cid;
-                ^
-stack/mac/scheduler/LteSchedulerEnb.cc: In member function 'ActiveSet LteSchedulerEnb::readActiveConnections()':
-stack/mac/scheduler/LteSchedulerEnb.cc:934:12: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
-     MacCid cid;
-            ^
-In file included from stack/mac/scheduler/LteSchedulerEnbDlRealistic.cc:11:0:
-stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
-stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
-         MacCid cid;
-                ^
-stack/mac/scheduler/LteSchedulerEnbUl.cc
-stack/mac/scheduler/LteScheduler.cc
-stack/mac/scheduling_modules/LteMaxCiOptMB.cc
-stack/mac/scheduling_modules/LteMaxCiComp.cc
-In file included from stack/mac/scheduler/LteScheduler.cc:10:0:
-stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
-stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
-         MacCid cid;
-                ^
-In file included from stack/mac/scheduling_modules/LteMaxCiComp.h:13:0,
-                 from stack/mac/scheduling_modules/LteMaxCiComp.cc:10:
-stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
-stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
-         MacCid cid;
-                ^
-In file included from stack/mac/scheduling_modules/LteMaxCiOptMB.h:11:0,
-                 from stack/mac/scheduling_modules/LteMaxCiOptMB.cc:14:
-stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
-stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
-         MacCid cid;
-                ^
-stack/mac/scheduling_modules/LteMaxCi.cc
-stack/mac/scheduling_modules/LteDrr.cc
-stack/mac/scheduling_modules/LtePf.cc
-In file included from stack/mac/scheduling_modules/LteMaxCi.h:13:0,
-                 from stack/mac/scheduling_modules/LteMaxCi.cc:10:
-stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
-stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
-         MacCid cid;
-                ^
-stack/mac/scheduling_modules/LteMaxCiMultiband.cc
-In file included from stack/mac/scheduling_modules/LteDrr.h:14:0,
-                 from stack/mac/scheduling_modules/LteDrr.cc:10:
-stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
-stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
-         MacCid cid;
-                ^
-In file included from stack/mac/scheduling_modules/LtePf.h:13:0,
-                 from stack/mac/scheduling_modules/LtePf.cc:10:
-stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
-stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
-         MacCid cid;
-                ^
-In file included from stack/mac/scheduling_modules/LteMaxCiMultiband.h:11:0,
-                 from stack/mac/scheduling_modules/LteMaxCiMultiband.cc:10:
-stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
-stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
-         MacCid cid;
-                ^
-stack/mac/scheduling_modules/LteMaxCiMultiband.cc: In member function 'virtual void LteMaxCiMultiband::prepareSchedule()':
-stack/mac/scheduling_modules/LteMaxCiMultiband.cc:54:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-         for( ; band < vect.size() ; ++band )
-                     ^
-stack/pdcp_rrc/ConnectionsTable.cc
-MSGC: stack/pdcp_rrc/packet/LtePdcpPdu.msg
-stack/pdcp_rrc/layer/entity/LtePdcpEntity.cc
-stack/phy/ChannelModel/LteDummyChannelModel.cc
-MSGC: stack/rlc/packet/LteRlcSdu.msg
-stack/phy/ChannelModel/LteChannelModel.cc
-stack/phy/das/RemoteAntennaSet.cc
-stack/phy/das/DasFilter.cc
-stack/phy/feedback/LteFeedbackComputationDummy.cc
-stack/phy/feedback/LteFeedbackComputation.cc
-stack/phy/feedback/LteFeedbackComputationRealistic.cc
-stack/phy/feedback/LteFeedbackComputationDummy.cc: In member function 'void LteFeedbackComputationDummy::generateBaseFeedback(int, int, LteFeedback&, FeedbackType, int, RbAllocationType, TxMode)':
-stack/phy/feedback/LteFeedbackComputationDummy.cc:321:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-             for (unsigned int z = 0; j < newCqi.size(); z++)
-                                        ^
-stack/phy/feedback/LteFeedback.cc
-stack/phy/feedback/LteDlFeedbackGenerator.cc
-stack/phy/feedback/testFeedback/FeedbackTester.cc
-stack/phy/layer/LtePhyEnbD2D.cc
-stack/phy/layer/LtePhyEnb.cc
-stack/phy/layer/LtePhyUe.cc
-stack/phy/layer/LtePhyRelay.cc
-stack/phy/layer/LtePhyBase.cc
-stack/phy/layer/LtePhyUeD2D.cc
-stack/phy/packet/LteFeedbackPkt.cc
-stack/phy/packet/LteAirFrame.cc
-stack/rlc/LteRlcMux.cc
-MSGC: stack/rlc/am/packet/LteRlcAmPdu.msg
-MSGC: stack/rlc/am/packet/LteRlcAmSdu.msg
-stack/rlc/am/packet/LteRlcAmPdu.cc
-MSGC: stack/rlc/packet/LteRlcDataPdu.msg
-stack/rlc/tm/LteRlcTm.cc
-stack/rlc/um/LteRlcUmRealistic.cc
-stack/rlc/am/packet/LteRlcAmPdu.cc: In member function 'virtual bool LteRlcAmPdu::isFirst()':
-stack/rlc/am/packet/LteRlcAmPdu.cc:57:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     return (firstSn == snoFragment);
-                     ^
-stack/rlc/am/packet/LteRlcAmPdu.cc: In member function 'virtual bool LteRlcAmPdu::isLast()':
-stack/rlc/am/packet/LteRlcAmPdu.cc:69:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     return (lastSn == snoFragment);
-                    ^
-stack/rlc/um/LteRlcUmRealisticD2D.cc
-stack/rlc/um/LteRlcUm.cc
-stack/rlc/um/buffer/UmFragbuf.cc
-stack/rlc/um/buffer/UmTxQueue.cc
-stack/rlc/um/buffer/UmRxQueue.cc
-stack/rlc/um/entity/UmTxEntity.cc
-stack/rlc/um/entity/UmRxEntity.cc
-world/radio/ChannelControl.cc
-stack/rlc/um/entity/UmTxEntity.cc: In member function 'void UmTxEntity::rlcPduMake(int)':
-stack/rlc/um/entity/UmTxEntity.cc:50:29: warning: 'bool omnetpp::cQueue::empty() const' is deprecated (declared at /home/joelias/omnetpp-5.0/include/omnetpp/cqueue.h:298) [-Wdeprecated-declarations]
-     while (!sduQueue_.empty() && pduLength > 0)
-                             ^
-stack/rlc/um/buffer/UmRxQueue.cc: In member function 'bool UmRxQueue::defragment(omnetpp::cPacket*)':
-stack/rlc/um/buffer/UmRxQueue.cc:43:20: warning: unused variable 'dir' [-Wunused-variable]
-     unsigned short dir = lteInfo->getDirection();
-                    ^
-stack/rlc/um/entity/UmRxEntity.cc: In member function 'void UmRxEntity::enque(omnetpp::cPacket*)':
-stack/rlc/um/entity/UmRxEntity.cc:101:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-                 int p = (shift < rxWindowDesc_.windowSize_) ? shift : rxWindowDesc_.windowSize_;
-                                ^
-stack/rlc/um/entity/UmRxEntity.cc: In member function 'void UmRxEntity::moveRxWindow(int)':
-stack/rlc/um/entity/UmRxEntity.cc:215:12: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     if (pos>rxWindowDesc_.windowSize_)
-            ^
-world/radio/LteChannelControl.cc
-world/radio/ChannelAccess.cc
-x2/LteX2Manager.cc
-x2/X2AppClient.cc
-x2/X2AppServer.cc
-apps/alert/AlertPacket_m.cc
-apps/vod/M1Message_m.cc
-apps/vod/VoDPacket_m.cc
-apps/voip/VoipPacket_m.cc
-common/LteControlInfo_m.cc
-common/timer/TMultiTimerMsg_m.cc
-common/timer/TTimerMsg_m.cc
-epc/gtp/GtpUserMsg_m.cc
-stack/d2dModeSelection/D2DModeSwitchNotification_m.cc
-stack/mac/packet/LteMacPdu_m.cc
-stack/mac/packet/LteRac_m.cc
-stack/mac/packet/LteSchedulingGrant_m.cc
-stack/mac/packet/LteHarqFeedback_m.cc
-stack/mac/packet/LteMacSduRequest_m.cc
-stack/pdcp_rrc/packet/LtePdcpPdu_m.cc
-stack/phy/packet/LteAirFrame_m.cc
-stack/phy/packet/LteFeedbackPkt_m.cc
-stack/phy/packet/AirFrame_m.cc
-stack/rlc/am/packet/LteRlcAmSdu_m.cc
-stack/rlc/am/packet/LteRlcAmPdu_m.cc
-stack/rlc/packet/LteRlcSdu_m.cc
-stack/rlc/packet/LteRlcDataPdu_m.cc
-stack/rlc/packet/LteRlcPdu_m.cc
-x2/packet/LteX2Message_m.cc
-x2/packet/X2ControlInfo_m.cc
-apps/alert/AlertSender.cc
-apps/alert/AlertReceiver.cc
-apps/vod/VoDUDPClient.cc
-apps/vod/VoDUDPServer.cc
-apps/vod/VoDUDPClient.cc: In member function 'virtual void VoDUDPClient::receiveStream(VoDPacket*)':
-apps/vod/VoDUDPClient.cc:137:9: warning: unused variable 'seqNum' [-Wunused-variable]
-     int seqNum = msg->getFrameSeqNum();
-         ^
-apps/vod/VoDUDPClient.cc:139:9: warning: unused variable 'frameLength' [-Wunused-variable]
-     int frameLength = msg->getFrameLength();
-         ^
-apps/voip/VoIPReceiver.cc
-apps/voip/VoIPSender.cc
-common/LteCommon.cc
-apps/voip/VoIPReceiver.cc: In member function 'void VoIPReceiver::playout(bool)':
-apps/voip/VoIPReceiver.cc:117:18: warning: unused variable 'firstFrameId' [-Wunused-variable]
-     unsigned int firstFrameId = pPacket->getIDframe();
-                  ^
-common/LteControlInfo.cc
-common/timer/TTimer.cc
-corenetwork/lteip/IP2lte.cc
-epc/gtp/GtpUser.cc
-epc/gtp/GtpUserX2.cc
-epc/gtp/GtpUser.cc: In member function 'void GtpUser::handleFromUdp(GtpUserMsg*)':
-epc/gtp/GtpUser.cc:104:39: warning: unused variable 'nextTeid' [-Wunused-variable]
-     TunnelEndpointIdentifier oldTeid, nextTeid;
+battery/BaseBattery.cc
+battery/SimpleBattery.cc
+battery/MiximBatteryAccess.cc
+In file included from battery/BatteryAccess.h:13:0,
+                 from battery/MiximBatteryAccess.cc:8:
+battery/BaseBattery.h:69:39: error: expected class-name before '{' token
+ class BaseBattery : public BaseModule {
                                        ^
-epc/gtp/GtpUserSimplified.cc
-stack/d2dModeSelection/D2DModeSelectionBase.cc
-stack/mac/buffer/LteMacQueue.cc
-stack/mac/buffer/harq/LteHarqUnitTx.cc
-epc/gtp/GtpUserSimplified.cc: In member function 'EpcNodeType GtpUserSimplified::selectOwnerType(const char*)':
-epc/gtp/GtpUserSimplified.cc:49:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-stack/mac/buffer/harq/LteHarqBufferTx.cc
-stack/mac/buffer/harq/LteHarqProcessRx.cc
-stack/mac/layer/LteMacEnbRealisticD2D.cc
-stack/mac/layer/LteMacUeRealisticD2D.cc
-stack/mac/layer/LteMacUeRealistic.cc
-stack/mac/layer/LteMacEnbRealistic.cc
-In file included from stack/mac/layer/LteMacEnbRealisticD2D.cc:14:0:
-stack/mac/amc/AmcPilotD2D.h: In member function 'virtual std::vector<short unsigned int> AmcPilotD2D::getMultiBandCqi(MacNodeId, Direction)':
-stack/mac/amc/AmcPilotD2D.h:54:82: warning: no return statement in function returning non-void [-Wreturn-type]
-     virtual std::vector<Cqi>  getMultiBandCqi(MacNodeId id, const Direction dir){}
-                                                                                  ^
-stack/mac/amc/AmcPilotD2D.h: In member function 'virtual UsableBands* AmcPilotD2D::getUsableBands(MacNodeId)':
-stack/mac/amc/AmcPilotD2D.h:56:55: warning: no return statement in function returning non-void [-Wreturn-type]
-     virtual UsableBands* getUsableBands(MacNodeId id){}
-                                                       ^
-stack/mac/layer/LteMacUeRealistic.cc: In member function 'virtual void LteMacUeRealistic::macPduMake()':
-stack/mac/layer/LteMacUeRealistic.cc:151:39: warning: 'bool omnetpp::cQueue::empty() const' is deprecated (declared at /home/joelias/omnetpp-5.0/include/omnetpp/cqueue.h:298) [-Wdeprecated-declarations]
-             if (mbuf_[destCid]->empty())
-                                       ^
-stack/mac/layer/LteMacUeRealistic.cc: In member function 'virtual void LteMacUeRealistic::handleUpperMessage(omnetpp::cPacket*)':
-stack/mac/layer/LteMacUeRealistic.cc:393:12: warning: unused variable 'cid' [-Wunused-variable]
-     MacCid cid = idToMacCid(lteInfo->getDestId(), lteInfo->getLcid());
-            ^
-stack/mac/layer/LteMacUeRealistic.cc: In member function 'virtual void LteMacUeRealistic::handleSelfMessage()':
-stack/mac/layer/LteMacUeRealistic.cc:490:29: warning: unused variable 'scheduleList' [-Wunused-variable]
-         LteMacScheduleList* scheduleList =NULL;
-                             ^
-stack/mac/layer/LteMacUeRealisticD2D.cc: In member function 'virtual void LteMacUeRealisticD2D::macPduMake()':
-stack/mac/layer/LteMacUeRealisticD2D.cc:207:43: warning: 'bool omnetpp::cQueue::empty() const' is deprecated (declared at /home/joelias/omnetpp-5.0/include/omnetpp/cqueue.h:298) [-Wdeprecated-declarations]
-                 if (mbuf_[destCid]->empty())
-                                           ^
-stack/mac/layer/LteMacUeRealisticD2D.cc: In member function 'void LteMacUeRealisticD2D::macHandleD2DModeSwitch(omnetpp::cPacket*)':
-stack/mac/layer/LteMacUeRealisticD2D.cc:847:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-                         for (int proc = 0; proc < (unsigned int) UE_TX_HARQ_PROCESSES; proc++)
-                                                 ^
-stack/mac/layer/LteMacUeRealisticD2D.cc:858:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-                         for (int proc = 0; proc < (unsigned int) UE_TX_HARQ_PROCESSES; proc++)
-                                                 ^
-stack/mac/layer/LteMacEnbRealistic.cc: In member function 'virtual void LteMacEnbRealistic::macSduRequest()':
-stack/mac/layer/LteMacEnbRealistic.cc:92:18: warning: unused variable 'cw' [-Wunused-variable]
-         Codeword cw = it->first.second;
+battery/BaseBattery.h:126:10: error: 'HostState' does not name a type
+  virtual HostState::States getState() const = 0;
+          ^
+battery/BaseBattery.h: In constructor 'BaseBattery::BaseBattery()':
+battery/BaseBattery.h:79:18: error: class 'BaseBattery' does not have any field named 'BaseModule'
+  BaseBattery() : BaseModule()
                   ^
-stack/mac/layer/LteMacUe.cc
-stack/pdcp_rrc/layer/LtePdcpRrcUeD2D.cc
-stack/pdcp_rrc/layer/LtePdcpRrc.cc
-stack/pdcp_rrc/layer/LtePdcpRrcEnbD2D.cc
-stack/mac/layer/LteMacUe.cc: In member function 'virtual void LteMacUe::deleteQueues(MacNodeId)':
-stack/mac/layer/LteMacUe.cc:706:36: warning: 'bool omnetpp::cQueue::empty() const' is deprecated (declared at /home/joelias/omnetpp-5.0/include/omnetpp/cqueue.h:298) [-Wdeprecated-declarations]
-         while (!mit->second->empty())
+battery/BaseBattery.h: In constructor 'BaseBattery::BaseBattery(unsigned int)':
+battery/BaseBattery.h:81:36: error: class 'BaseBattery' does not have any field named 'BaseModule'
+  BaseBattery(unsigned stacksize) : BaseModule(stacksize)
                                     ^
-stack/phy/ChannelModel/LteRealisticChannelModel.cc
-stack/rlc/am/LteRlcAm.cc
-stack/rlc/am/buffer/AmTxQueue.cc
-stack/rlc/am/buffer/AmRxQueue.cc
-stack/phy/ChannelModel/LteRealisticChannelModel.cc: In member function 'virtual std::vector<double> LteRealisticChannelModel::getSINR(LteAirFrame*, UserControlInfo*)':
-stack/phy/ChannelModel/LteRealisticChannelModel.cc:712:13: warning: variable 'eNbType' set but not used [-Wunused-but-set-variable]
-     EnbType eNbType;
-             ^
-stack/phy/ChannelModel/LteRealisticChannelModel.cc: In member function 'double LteRealisticChannelModel::computeExtCellPathLoss(double, MacNodeId)':
-stack/phy/ChannelModel/LteRealisticChannelModel.cc:2258:16: warning: unused variable 'mean' [-Wunused-variable]
-         double mean = 0;
-                ^
-stack/phy/ChannelModel/LteRealisticChannelModel.cc:2263:16: warning: unused variable 'time' [-Wunused-variable]
-         double time = 0;
-                ^
-stack/phy/ChannelModel/LteRealisticChannelModel.cc:2264:16: warning: unused variable 'space' [-Wunused-variable]
-         double space = 0;
-                ^
-stack/phy/ChannelModel/LteRealisticChannelModel.cc:2221:12: warning: unused variable 'movement' [-Wunused-variable]
-     double movement = .0;
-            ^
-stack/phy/ChannelModel/LteRealisticChannelModel.cc:2222:12: warning: variable 'speed' set but not used [-Wunused-but-set-variable]
-     double speed = .0;
-            ^
-stack/phy/ChannelModel/LteRealisticChannelModel.cc: In member function 'bool LteRealisticChannelModel::computeInCellD2DInterference(MacNodeId, MacNodeId, inet::Coord, MacNodeId, inet::Coord, bool, std::vector<double>*, Direction)':
-stack/phy/ChannelModel/LteRealisticChannelModel.cc:2424:18: warning: variable 'ltePhy_destId' set but not used [-Wunused-but-set-variable]
-     LtePhyBase * ltePhy_destId;
-                  ^
-stack/rlc/am/buffer/AmTxQueue.cc: In member function 'void AmTxQueue::discard(int)':
-stack/rlc/am/buffer/AmTxQueue.cc:179:47: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     if ((txWindowIndex < 0) || (txWindowIndex >= txWindowDesc_.windowSize_))
-                                               ^
-stack/rlc/am/buffer/AmTxQueue.cc:206:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-         i < (txWindowDesc_.seqNum_ - txWindowDesc_.firstSeqNum_); ++i)
-           ^
-stack/rlc/am/buffer/AmTxQueue.cc: In member function 'void AmTxQueue::checkForMrw()':
-stack/rlc/am/buffer/AmTxQueue.cc:268:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     for (int i = 0; i < (txWindowDesc_.seqNum_ - txWindowDesc_.firstSeqNum_); ++i)
-                       ^
-stack/rlc/am/buffer/AmTxQueue.cc: In member function 'void AmTxQueue::moveTxWindow(int)':
-stack/rlc/am/buffer/AmTxQueue.cc:333:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-         i < ((txWindowDesc_.seqNum_ - txWindowDesc_.firstSeqNum_)); ++i)
-           ^
-stack/rlc/am/buffer/AmTxQueue.cc:371:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-         i < txWindowDesc_.windowSize_; ++i)
-           ^
-stack/rlc/am/buffer/AmTxQueue.cc: In member function 'void AmTxQueue::recvAck(int)':
-stack/rlc/am/buffer/AmTxQueue.cc:509:15: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     if (index >= txWindowDesc_.windowSize_)
-               ^
-stack/rlc/am/buffer/AmTxQueue.cc: In member function 'void AmTxQueue::recvCumulativeAck(int)':
-stack/rlc/am/buffer/AmTxQueue.cc:527:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     if ((seqNum < txWindowDesc_.firstSeqNum_) || (seqNum < 0))
-                 ^
-stack/rlc/am/buffer/AmTxQueue.cc:542:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-         for (int i = 0; i <= (seqNum - txWindowDesc_.firstSeqNum_); ++i)
-                           ^
-stack/rlc/am/buffer/AmTxQueue.cc: In member function 'void AmTxQueue::pduTimerHandle(int)':
-stack/rlc/am/buffer/AmTxQueue.cc:609:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     if ((index < 0) || (index >= txWindowDesc_.windowSize_))
-                               ^
-stack/rlc/am/buffer/AmTxQueue.cc: In member function 'void AmTxQueue::mrwTimerHandle(int)':
-stack/rlc/am/buffer/AmTxQueue.cc:665:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     if (mrwDesc_.lastMrw_ > sn)
-                           ^
-stack/rlc/am/buffer/AmRxQueue.cc: In member function 'void AmRxQueue::discard(int)':
-stack/rlc/am/buffer/AmRxQueue.cc:106:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     if ((index < 0) || (index >= rxWindowDesc_.windowSize_))
-                               ^
-stack/rlc/am/buffer/AmRxQueue.cc: In member function 'void AmRxQueue::enque(LteRlcAmPdu*)':
-stack/rlc/am/buffer/AmRxQueue.cc:256:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     else if ((index >= rxWindowDesc_.windowSize_))
-                     ^
-stack/rlc/am/buffer/AmRxQueue.cc:264:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-         if (tsn == rxWindowDesc_.seqNum_)
-                 ^
-stack/rlc/am/buffer/AmRxQueue.cc: In member function 'void AmRxQueue::checkCompleteSdu(int)':
-stack/rlc/am/buffer/AmRxQueue.cc:497:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     for (int i = index + 1; i < (rxWindowDesc_.windowSize_); ++i)
-                               ^
-stack/rlc/am/buffer/AmRxQueue.cc: In member function 'void AmRxQueue::sendStatusReport()':
-stack/rlc/am/buffer/AmRxQueue.cc:562:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     for (int i = 0; i < rxWindowDesc_.windowSize_; ++i)
-                       ^
-stack/rlc/am/buffer/AmRxQueue.cc:598:24: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-         if (cumulative < rxWindowDesc_.windowSize_)
-                        ^
-stack/rlc/am/buffer/AmRxQueue.cc: In member function 'int AmRxQueue::computeWindowShift() const':
-stack/rlc/am/buffer/AmRxQueue.cc:629:24: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     for ( int i = 0; i < rxWindowDesc_.windowSize_; ++i)
-                        ^
-stack/rlc/am/buffer/AmRxQueue.cc: In member function 'void AmRxQueue::moveRxWindow(int)':
-stack/rlc/am/buffer/AmRxQueue.cc:652:12: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     if (pos>rxWindowDesc_.windowSize_)
-            ^
-stack/rlc/am/buffer/AmRxQueue.cc:684:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-     for ( int i = pos; i < rxWindowDesc_.windowSize_; ++i)
-                          ^
-stack/rlc/am/buffer/AmRxQueue.cc:660:9: warning: unused variable 'firstSeqNum' [-Wunused-variable]
-     int firstSeqNum=0;
+In file included from battery/MiximBatteryAccess.cc:8:0:
+battery/BatteryAccess.h: At global scope:
+battery/BatteryAccess.h:24:1: error: expected class-name before '{' token
+ {
+ ^
+battery/BatteryAccess.h:71:29: error: 'MiximBatteryAccess' does not name a type
+         BatteryAccess(const MiximBatteryAccess&);
+                             ^
+battery/BatteryAccess.h:74:9: error: 'MiximBatteryAccess' does not name a type
+         MiximBatteryAccess& operator=(const MiximBatteryAccess&);
          ^
-stack/rlc/packet/LteRlcDataPdu.cc
-In file included from stack/phy/ChannelModel/LteRealisticChannelModel.cc:17:0:
-stack/phy/layer/LtePhyUe.h: In member function 'unsigned int LtePhyUe::getUsedRbs(Remote, Band)':
-stack/phy/layer/LtePhyUe.h:157:5: warning: control reaches end of non-void function [-Wreturn-type]
+In file included from battery/MiximBatteryAccess.cc:12:0:
+../../inet/src/inet/common/FindModule.h:14:23: error: 'cModule' does not name a type
+ template<typename T = cModule *const>
+                       ^
+../../inet/src/inet/common/FindModule.h:14:31: error: expected '>' before '*' token
+ template<typename T = cModule *const>
+                               ^
+../../inet/src/inet/common/FindModule.h:24:34: error: 'cModule' does not name a type
+     static T findSubModule(const cModule *const top)
+                                  ^
+../../inet/src/inet/common/FindModule.h:57:12: error: 'cModule' does not name a type
+     static cModule *findHost(cModule *m)
+            ^
+../../inet/src/inet/common/FindModule.h:62:12: error: 'cModule' does not name a type
+     static cModule *findNetwork(cModule *m)
+            ^
+../../inet/src/inet/common/FindModule.h:70:18: error: 'cModule' does not name a type
+     static const cModule *findHost(const cModule *const m)
+                  ^
+../../inet/src/inet/common/FindModule.h:75:18: error: 'cModule' does not name a type
+     static const cModule *findNetwork(const cModule *const m)
+                  ^
+../../inet/src/inet/common/FindModule.h: In static member function 'static T inet::FindModule<T>::findSubModule(const int*)':
+../../inet/src/inet/common/FindModule.h:26:14: error: 'cModule' has not been declared
+         for (cModule::SubmoduleIterator i(top); !i.end(); i++) {
+              ^
+../../inet/src/inet/common/FindModule.h:26:50: error: 'i' was not declared in this scope
+         for (cModule::SubmoduleIterator i(top); !i.end(); i++) {
+                                                  ^
+../../inet/src/inet/common/FindModule.h:27:13: error: 'cModule' was not declared in this scope
+             cModule *const sub = i();
+             ^
+../../inet/src/inet/common/FindModule.h:27:13: note: suggested alternative:
+In file included from /home/joelias/omnetpp-5.0/include/omnetpp/cdisplaystring.h:21:0,
+                 from /home/joelias/omnetpp-5.0/include/omnetpp.h:37,
+                 from battery/BaseBattery.h:4,
+                 from battery/BatteryAccess.h:13,
+                 from battery/MiximBatteryAccess.cc:8:
+/home/joelias/omnetpp-5.0/include/omnetpp/cmodule.h:47:15: note:   'omnetpp::cModule'
+ class SIM_API cModule : public cComponent //implies noncopyable
+               ^
+In file included from battery/MiximBatteryAccess.cc:12:0:
+../../inet/src/inet/common/FindModule.h:27:22: error: expected primary-expression before 'const'
+             cModule *const sub = i();
+                      ^
+../../inet/src/inet/common/FindModule.h:29:42: error: 'sub' was not declared in this scope
+             T dCastRet = dynamic_cast<T>(sub);
+                                          ^
+../../inet/src/inet/common/FindModule.h: In static member function 'static T inet::FindModule<T>::findGlobalModule()':
+../../inet/src/inet/common/FindModule.h:48:44: error: there are no arguments to 'getSimulation' that depend on a template parameter, so a declaration of 'getSimulation' must be available [-fpermissive]
+         return findSubModule(getSimulation()->getSystemModule());
+                                            ^
+../../inet/src/inet/common/FindModule.h:48:44: note: (if you use '-fpermissive', G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+../../inet/src/inet/common/FindModule.h: At global scope:
+../../inet/src/inet/common/FindModule.h:87:23: error: 'cModule' does not name a type
+ template<typename T = cModule>
+                       ^
+../../inet/src/inet/common/FindModule.h:114:8: error: expected ';' at end of member declaration
+     T *get(cModule *const from = nullptr)
+        ^
+../../inet/src/inet/common/FindModule.h:114:20: error: expected ')' before '*' token
+     T *get(cModule *const from = nullptr)
+                    ^
+battery/MiximBatteryAccess.cc:61:1: error: expected '}' at end of input
+ }
+ ^
+In file included from battery/MiximBatteryAccess.cc:12:0:
+../../inet/src/inet/common/FindModule.h:110:5: error: expected unqualified-id at end of input
      }
      ^
-Creating shared library: ../out/gcc-debug/src/libinet-framework-simulte-afd56c4.so
+../../inet/src/inet/common/FindModule.h:110:5: error: expected '}' at end of input
+In file included from battery/BaseBattery.cc:1:0:
+battery/BaseBattery.h:69:39: error: expected class-name before '{' token
+ class BaseBattery : public BaseModule {
+                                       ^
+battery/BaseBattery.h:126:10: error: 'HostState' does not name a type
+  virtual HostState::States getState() const = 0;
+          ^
+battery/BaseBattery.h: In constructor 'BaseBattery::BaseBattery()':
+battery/BaseBattery.h:79:18: error: class 'BaseBattery' does not have any field named 'BaseModule'
+  BaseBattery() : BaseModule()
+                  ^
+battery/BaseBattery.h: In constructor 'BaseBattery::BaseBattery(unsigned int)':
+battery/BaseBattery.h:81:36: error: class 'BaseBattery' does not have any field named 'BaseModule'
+  BaseBattery(unsigned stacksize) : BaseModule(stacksize)
+                                    ^
+Makefile:341: recipe for target '../out/gcc-debug/src/battery/MiximBatteryAccess.o' failed
+make[1]: *** [../out/gcc-debug/src/battery/MiximBatteryAccess.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+make[1]: *** [../out/gcc-debug/src/battery/BaseBattery.o] Error 1
+Makefile:341: recipe for target '../out/gcc-debug/src/battery/BaseBattery.o' failed
+In file included from battery/BatteryStats.h__:21:0,
+                 from battery/SimpleBattery.cc:20:
+battery/BaseBattery.h:69:39: error: expected class-name before '{' token
+ class BaseBattery : public BaseModule {
+                                       ^
+battery/BaseBattery.h:126:10: error: 'HostState' does not name a type
+  virtual HostState::States getState() const = 0;
+          ^
+battery/BaseBattery.h: In constructor 'BaseBattery::BaseBattery()':
+battery/BaseBattery.h:79:18: error: class 'BaseBattery' does not have any field named 'BaseModule'
+  BaseBattery() : BaseModule()
+                  ^
+battery/BaseBattery.h: In constructor 'BaseBattery::BaseBattery(unsigned int)':
+battery/BaseBattery.h:81:36: error: class 'BaseBattery' does not have any field named 'BaseModule'
+  BaseBattery(unsigned stacksize) : BaseModule(stacksize)
+                                    ^
+In file included from battery/SimpleBattery.cc:20:0:
+battery/BatteryStats.h__: At global scope:
+battery/BatteryStats.h__:41:1: error: expected class-name before '{' token
+ {
+ ^
+battery/BatteryStats.h__:62:22: error: 'simsignalwrap_t' does not name a type
+         const static simsignalwrap_t catBatteryStateSignal;
+                      ^
+battery/BatteryStats.h__: In constructor 'BatteryStats::BatteryStats()':
+battery/BatteryStats.h__:52:5: error: class 'BatteryStats' does not have any field named 'BaseModule'
+   : BaseModule()
+     ^
+In file included from battery/SimpleBattery.cc:21:0:
+battery/SimpleBattery.h: At global scope:
+battery/SimpleBattery.h:56:37: error: 'HostState' does not name a type
+  virtual void handleHostState(const HostState& state);
+                                     ^
+battery/SimpleBattery.h:88:10: error: 'HostState' does not name a type
+  virtual HostState::States getState() const {
+          ^
+battery/SimpleBattery.h:124:2: error: 'HostState' does not name a type
+  HostState hostState;
+  ^
+In file included from battery/SimpleBattery.cc:26:0:
+../../inet/src/inet/common/FindModule.h: In static member function 'static omnetpp::cModule* inet::FindModule<T>::findHost(omnetpp::cModule*)':
+../../inet/src/inet/common/FindModule.h:59:36: error: there are no arguments to 'findContainingNode' that depend on a template parameter, so a declaration of 'findContainingNode' must be available [-fpermissive]
+         return findContainingNode(m);
+                                    ^
+../../inet/src/inet/common/FindModule.h:59:36: note: (if you use '-fpermissive', G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+../../inet/src/inet/common/FindModule.h: In static member function 'static const omnetpp::cModule* inet::FindModule<T>::findHost(const omnetpp::cModule*)':
+../../inet/src/inet/common/FindModule.h:72:81: error: there are no arguments to 'findContainingNode' that depend on a template parameter, so a declaration of 'findContainingNode' must be available [-fpermissive]
+         return const_cast<cModule *>(findContainingNode(const_cast<cModule *>(m)));
+                                                                                 ^
+In file included from /home/joelias/omnetpp-5.0/include/omnetpp/cobject.h:26:0,
+                 from /home/joelias/omnetpp-5.0/include/omnetpp/cnamedobject.h:23,
+                 from /home/joelias/omnetpp-5.0/include/omnetpp/cownedobject.h:23,
+                 from /home/joelias/omnetpp-5.0/include/omnetpp/carray.h:19,
+                 from /home/joelias/omnetpp-5.0/include/omnetpp.h:21,
+                 from battery/BatteryStats.h__:16,
+                 from battery/SimpleBattery.cc:20:
+battery/SimpleBattery.cc: In function 'omnetpp::cObject* __factoryfunc_36()':
+battery/SimpleBattery.cc:36:15: error: cannot convert 'SimpleBattery*' to 'omnetpp::cModule*' in initialization
+ Define_Module(SimpleBattery);
+               ^
+/home/joelias/omnetpp-5.0/include/omnetpp/regmacros.h:144:92: note: in definition of macro '__REGISTER_CLASS'
+   static omnetpp::cObject *MAKE_UNIQUE_WITHIN_FILE(__factoryfunc_)() {BASECLASS *ret = new CLASSNAME; return ret; } \
+                                                                                            ^
+battery/SimpleBattery.cc:36:1: note: in expansion of macro 'Define_Module'
+ Define_Module(SimpleBattery);
+ ^
+battery/SimpleBattery.cc: In constructor 'SimpleBattery::SimpleBattery()':
+battery/SimpleBattery.cc:50:4: error: class 'SimpleBattery' does not have any field named 'hostState'
+  , hostState()
+    ^
+battery/SimpleBattery.cc: In member function 'virtual void SimpleBattery::initialize(int)':
+battery/SimpleBattery.cc:64:2: error: 'initialize' is not a member of 'BaseBattery'
+  BaseBattery::initialize(stage);
+  ^
+battery/SimpleBattery.cc:67:26: error: 'par' was not declared in this scope
+   voltage = par("voltage");
+                          ^
+battery/SimpleBattery.cc:70:42: error: 'error' was not declared in this scope
+    error("invalid nominal capacity value");
+                                          ^
+battery/SimpleBattery.cc:81:47: error: 'scheduleAt' was not declared in this scope
+    scheduleAt(simTime() + publishTime, publish);
+                                               ^
+battery/SimpleBattery.cc:86:38: error: 'error' was not declared in this scope
+    error("invalid publishDelta value");
+                                      ^
+battery/SimpleBattery.cc:91:3: error: 'debugEV' was not declared in this scope
+   debugEV<< "capacity = " << capmAh << "mA-h (nominal = " << nominalCapmAh <<
+   ^
+battery/SimpleBattery.cc:113:45: error: 'scheduleAt' was not declared in this scope
+   scheduleAt(simTime() + resolution, timeout);
+                                             ^
+battery/SimpleBattery.cc:117:35: error: 'hasPar' was not declared in this scope
+   numDevices = hasPar("numDevices") ? par("numDevices") : 0;
+                                   ^
+battery/SimpleBattery.cc:126:19: error: 'findHost' was not declared in this scope
+   host = findHost();
+                   ^
+battery/SimpleBattery.cc:129:3: error: 'hostState' was not declared in this scope
+   hostState.set(HostState::ACTIVE);
+   ^
+battery/SimpleBattery.cc:129:17: error: 'HostState' has not been declared
+   hostState.set(HostState::ACTIVE);
+                 ^
+battery/SimpleBattery.cc:130:8: error: 'catHostStateSignal' was not declared in this scope
+   emit(catHostStateSignal.initialize(), &hostState);
+        ^
+battery/SimpleBattery.cc:130:51: error: 'emit' was not declared in this scope
+   emit(catHostStateSignal.initialize(), &hostState);
+                                                   ^
+battery/SimpleBattery.cc:134:9: error: 'catBatteryStateSignal' is not a member of 'BatteryStats'
+    emit(BatteryStats::catBatteryStateSignal.initialize(), batteryState);
+         ^
+battery/SimpleBattery.cc:137:4: error: 'catBatteryStateSignal' is not a member of 'BatteryStats'
+    BatteryStats::catBatteryStateSignal.initialize();
+    ^
+battery/SimpleBattery.cc: In member function 'virtual int SimpleBattery::registerDevice(const string&, int)':
+battery/SimpleBattery.cc:147:101: error: 'error' was not declared in this scope
+   error("To much devices registered with battery. Please adjust the Batteries numDevices parameter!");
+                                                                                                     ^
+battery/SimpleBattery.cc:151:37: error: 'error' was not declared in this scope
+   error("device already registered!");
+                                     ^
+battery/SimpleBattery.cc:157:50: error: 'error' was not declared in this scope
+   error("number of activities must be at least 1");
+                                                  ^
+battery/SimpleBattery.cc:173:2: error: 'debugEV' was not declared in this scope
+  debugEV<< "initialized device " << devices[deviceID].name << " as device "
+  ^
+battery/SimpleBattery.cc: In member function 'virtual void SimpleBattery::draw(int, DrawAmount&, int)':
+battery/SimpleBattery.cc:183:29: error: 'error' was not declared in this scope
+   error("Unknown device ID!");
+                             ^
+battery/SimpleBattery.cc:189:44: error: 'error' was not declared in this scope
+    error("drawMsg from unregistered device");
+                                            ^
+battery/SimpleBattery.cc:194:35: error: 'error' was not declared in this scope
+    error("invalid CURRENT message");
+                                   ^
+battery/SimpleBattery.cc:196:3: error: 'debugEV' was not declared in this scope
+   debugEV << simTime() << " device " << deviceID <<
+   ^
+battery/SimpleBattery.cc:211:44: error: 'error' was not declared in this scope
+    error("drawMsg from unregistered device");
+                                            ^
+battery/SimpleBattery.cc:215:38: error: 'error' was not declared in this scope
+    error("invalid activity specified");
+                                      ^
+battery/SimpleBattery.cc:218:3: error: 'debugEV' was not declared in this scope
+   debugEV << simTime() << " device " << deviceID <<
+   ^
+battery/SimpleBattery.cc:237:30: error: 'error' was not declared in this scope
+   error("Unknown power type!");
+                              ^
+battery/SimpleBattery.cc: In member function 'virtual void SimpleBattery::handleMessage(omnetpp::cMessage*)':
+battery/SimpleBattery.cc:247:46: error: 'scheduleAt' was not declared in this scope
+    scheduleAt(simTime() + resolution, timeout);
+                                              ^
+battery/SimpleBattery.cc:253:9: error: 'catBatteryStateSignal' is not a member of 'BatteryStats'
+    emit(BatteryStats::catBatteryStateSignal, batteryState);
+         ^
+battery/SimpleBattery.cc:253:58: error: 'emit' was not declared in this scope
+    emit(BatteryStats::catBatteryStateSignal, batteryState);
+                                                          ^
+battery/SimpleBattery.cc:260:47: error: 'error' was not declared in this scope
+    error("battery receives mysterious timeout");
+                                               ^
+battery/SimpleBattery.cc:264:29: error: 'error' was not declared in this scope
+   error("unexpected message");
+                             ^
+battery/SimpleBattery.cc: At global scope:
+battery/SimpleBattery.cc:269:43: error: 'HostState' does not name a type
+ void SimpleBattery::handleHostState(const HostState& /*state*/)
+                                           ^
+In file included from /home/joelias/omnetpp-5.0/include/omnetpp/cownedobject.h:22:0,
+                 from /home/joelias/omnetpp-5.0/include/omnetpp/carray.h:19,
+                 from /home/joelias/omnetpp-5.0/include/omnetpp.h:21,
+                 from battery/BatteryStats.h__:16,
+                 from battery/SimpleBattery.cc:20:
+battery/SimpleBattery.cc: In member function 'virtual void SimpleBattery::deductAndCheck()':
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:123:76: error: no matching function for call to 'omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(SimpleBattery*)'
+ #define Enter_Method_Silent  omnetpp::cMethodCallContextSwitcher __ctx(this); __ctx.methodCallSilent
+                                                                            ^
+battery/SimpleBattery.cc:275:2: note: in expansion of macro 'Enter_Method_Silent'
+  Enter_Method_Silent();
+  ^
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:123:76: note: candidates are:
+ #define Enter_Method_Silent  omnetpp::cMethodCallContextSwitcher __ctx(this); __ctx.methodCallSilent
+                                                                            ^
+battery/SimpleBattery.cc:275:2: note: in expansion of macro 'Enter_Method_Silent'
+  Enter_Method_Silent();
+  ^
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:162:5: note: omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const omnetpp::cComponent*)
+     cMethodCallContextSwitcher(const cComponent *newContext);
+     ^
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:162:5: note:   no known conversion for argument 1 from 'SimpleBattery*' to 'const omnetpp::cComponent*'
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:152:15: note: constexpr omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const omnetpp::cMethodCallContextSwitcher&)
+ class SIM_API cMethodCallContextSwitcher : public cContextSwitcher
+               ^
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:152:15: note:   no known conversion for argument 1 from 'SimpleBattery*' to 'const omnetpp::cMethodCallContextSwitcher&'
+battery/SimpleBattery.cc:315:3: error: 'debugEV' was not declared in this scope
+   debugEV<< simTime() << " residual capacity = " << residualCapacity << " fill state is " << estimateResidualRelative()*100.0 << "%" << endl;
+   ^
+battery/SimpleBattery.cc:318:14: error: 'ev' was not declared in this scope
+  if (host && ev.isGUI()) {
+              ^
+battery/SimpleBattery.cc:345:3: error: 'hostState' was not declared in this scope
+   hostState.set(HostState::FAILED);
+   ^
+battery/SimpleBattery.cc:345:17: error: 'HostState' has not been declared
+   hostState.set(HostState::FAILED);
+                 ^
+battery/SimpleBattery.cc:346:8: error: 'catHostStateSignal' was not declared in this scope
+   emit(catHostStateSignal, &hostState);
+        ^
+battery/SimpleBattery.cc:346:38: error: 'emit' was not declared in this scope
+   emit(catHostStateSignal, &hostState);
+                                      ^
+battery/SimpleBattery.cc:351:9: error: 'catBatteryStateSignal' is not a member of 'BatteryStats'
+    emit(BatteryStats::catBatteryStateSignal, batteryState);
+         ^
+battery/SimpleBattery.cc:356:22: error: 'cancelEvent' was not declared in this scope
+   cancelEvent(timeout);
+                      ^
+battery/SimpleBattery.cc:364:9: error: 'catBatteryStateSignal' is not a member of 'BatteryStats'
+    emit(BatteryStats::catBatteryStateSignal, batteryState);
+         ^
+battery/SimpleBattery.cc:364:58: error: 'emit' was not declared in this scope
+    emit(BatteryStats::catBatteryStateSignal, batteryState);
+                                                          ^
+In file included from /home/joelias/omnetpp-5.0/include/omnetpp/cownedobject.h:22:0,
+                 from /home/joelias/omnetpp-5.0/include/omnetpp/carray.h:19,
+                 from /home/joelias/omnetpp-5.0/include/omnetpp.h:21,
+                 from battery/BatteryStats.h__:16,
+                 from battery/SimpleBattery.cc:20:
+battery/SimpleBattery.cc: In member function 'virtual double SimpleBattery::getVoltage() const':
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:123:76: error: no matching function for call to 'omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const SimpleBattery*)'
+ #define Enter_Method_Silent  omnetpp::cMethodCallContextSwitcher __ctx(this); __ctx.methodCallSilent
+                                                                            ^
+battery/SimpleBattery.cc:379:2: note: in expansion of macro 'Enter_Method_Silent'
+  Enter_Method_Silent();
+  ^
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:123:76: note: candidates are:
+ #define Enter_Method_Silent  omnetpp::cMethodCallContextSwitcher __ctx(this); __ctx.methodCallSilent
+                                                                            ^
+battery/SimpleBattery.cc:379:2: note: in expansion of macro 'Enter_Method_Silent'
+  Enter_Method_Silent();
+  ^
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:162:5: note: omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const omnetpp::cComponent*)
+     cMethodCallContextSwitcher(const cComponent *newContext);
+     ^
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:162:5: note:   no known conversion for argument 1 from 'const SimpleBattery*' to 'const omnetpp::cComponent*'
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:152:15: note: constexpr omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const omnetpp::cMethodCallContextSwitcher&)
+ class SIM_API cMethodCallContextSwitcher : public cContextSwitcher
+               ^
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:152:15: note:   no known conversion for argument 1 from 'const SimpleBattery*' to 'const omnetpp::cMethodCallContextSwitcher&'
+battery/SimpleBattery.cc: In member function 'virtual double SimpleBattery::estimateResidualAbs() const':
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:123:76: error: no matching function for call to 'omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const SimpleBattery*)'
+ #define Enter_Method_Silent  omnetpp::cMethodCallContextSwitcher __ctx(this); __ctx.methodCallSilent
+                                                                            ^
+battery/SimpleBattery.cc:390:2: note: in expansion of macro 'Enter_Method_Silent'
+  Enter_Method_Silent();
+  ^
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:123:76: note: candidates are:
+ #define Enter_Method_Silent  omnetpp::cMethodCallContextSwitcher __ctx(this); __ctx.methodCallSilent
+                                                                            ^
+battery/SimpleBattery.cc:390:2: note: in expansion of macro 'Enter_Method_Silent'
+  Enter_Method_Silent();
+  ^
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:162:5: note: omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const omnetpp::cComponent*)
+     cMethodCallContextSwitcher(const cComponent *newContext);
+     ^
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:162:5: note:   no known conversion for argument 1 from 'const SimpleBattery*' to 'const omnetpp::cComponent*'
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:152:15: note: constexpr omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const omnetpp::cMethodCallContextSwitcher&)
+ class SIM_API cMethodCallContextSwitcher : public cContextSwitcher
+               ^
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:152:15: note:   no known conversion for argument 1 from 'const SimpleBattery*' to 'const omnetpp::cMethodCallContextSwitcher&'
+battery/SimpleBattery.cc: In member function 'virtual double SimpleBattery::estimateResidualRelative() const':
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:123:76: error: no matching function for call to 'omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const SimpleBattery*)'
+ #define Enter_Method_Silent  omnetpp::cMethodCallContextSwitcher __ctx(this); __ctx.methodCallSilent
+                                                                            ^
+battery/SimpleBattery.cc:401:2: note: in expansion of macro 'Enter_Method_Silent'
+  Enter_Method_Silent();
+  ^
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:123:76: note: candidates are:
+ #define Enter_Method_Silent  omnetpp::cMethodCallContextSwitcher __ctx(this); __ctx.methodCallSilent
+                                                                            ^
+battery/SimpleBattery.cc:401:2: note: in expansion of macro 'Enter_Method_Silent'
+  Enter_Method_Silent();
+  ^
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:162:5: note: omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const omnetpp::cComponent*)
+     cMethodCallContextSwitcher(const cComponent *newContext);
+     ^
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:162:5: note:   no known conversion for argument 1 from 'const SimpleBattery*' to 'const omnetpp::cComponent*'
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:152:15: note: constexpr omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const omnetpp::cMethodCallContextSwitcher&)
+ class SIM_API cMethodCallContextSwitcher : public cContextSwitcher
+               ^
+/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:152:15: note:   no known conversion for argument 1 from 'const SimpleBattery*' to 'const omnetpp::cMethodCallContextSwitcher&'
+battery/SimpleBattery.cc: In member function 'virtual void SimpleBattery::finish()':
+battery/SimpleBattery.cc:421:3: error: 'debugEV' was not declared in this scope
+   debugEV << "device " << i << " (" << devices[i].name << ") consumed "
+   ^
+battery/SimpleBattery.cc:430:7: error: 'FWMath' has not been declared
+   if (FWMath::round(SIMTIME_DBL(TotTime) * 1000000) - FWMath::round(SIMTIME_DBL(simTime()) * 1000000) != 0)
+       ^
+battery/SimpleBattery.cc:430:55: error: 'FWMath' has not been declared
+   if (FWMath::round(SIMTIME_DBL(TotTime) * 1000000) - FWMath::round(SIMTIME_DBL(simTime()) * 1000000) != 0)
+                                                       ^
+battery/SimpleBattery.cc:444:87: error: 'opp_warning' was not declared in this scope
+    opp_warning("No BatteryStats module found, no statistic summary/details available.");
+                                                                                       ^
+battery/SimpleBattery.cc:447:21: error: cannot call member function 'virtual void omnetpp::cComponent::finish()' without object
+  cComponent::finish();
+                     ^
+battery/SimpleBattery.cc: In destructor 'virtual SimpleBattery::~SimpleBattery()':
+battery/SimpleBattery.cc:451:25: error: 'cancelAndDelete' was not declared in this scope
+  cancelAndDelete(timeout);
+                         ^
+In file included from battery/SimpleBattery.cc:26:0:
+../../inet/src/inet/common/FindModule.h: In instantiation of 'static T inet::FindModule<T>::findSubModule(const omnetpp::cModule*) [with T = BatteryStats*]':
+battery/SimpleBattery.cc:438:58:   required from here
+../../inet/src/inet/common/FindModule.h:27:36: warning: 'omnetpp::cModule* omnetpp::cModule::SubmoduleIterator::operator()() const' is deprecated (declared at /home/joelias/omnetpp-5.0/include/omnetpp/cmodule.h:161) [-Wdeprecated-declarations]
+             cModule *const sub = i();
+                                    ^
+Makefile:341: recipe for target '../out/gcc-debug/src/battery/SimpleBattery.o' failed
+make[1]: *** [../out/gcc-debug/src/battery/SimpleBattery.o] Error 1
 make[1]: Leaving directory '/home/joelias/Dropbox/UFF/Pesquisa/lte-battery/inet-framework-simulte-afd56c4/src'
+make: *** [all] Error 2
+Makefile:2: recipe for target 'all' failed
 
-00:37:24 Build Finished (took 4m:28s.333ms)
+01:45:43 Build Finished (took 6s.478ms)
 
