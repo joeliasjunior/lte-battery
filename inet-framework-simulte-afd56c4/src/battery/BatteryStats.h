@@ -16,7 +16,8 @@
 #include <omnetpp.h>
 
 //#include "MiXiMDefs.h"
-//#include "BaseModule.h"
+#include "BatteryDefs.h"
+#include "BaseModule.h"
 #include "LtePhyBase.h"
 #include "BaseBattery.h"
 

@@ -9,7 +9,8 @@
 #define MIXIMBATTERYACCESS_H_
 
 //#include "MiXiMDefs.h"
-//#include "BaseModule.h"
+#include "BatteryDefs.h"
+#include "BaseModule.h"
 #include "BaseBattery.h"
 
 /**
@@ -20,11 +21,13 @@
  * @ingroup baseModules
  * @author Karl Wessel
  */
-class BatteryAccess : public LtePhyBase
+//class BatteryAccess : public LtePhyBase
+class BatteryAccess : public BaseModule
 {
     protected:
         /** @brief Stores pointer to the battery module. */
         BaseBattery* battery;
+        bool validate;
 
         /** @brief This devices id for the battery module. */
         int deviceID;
@@ -68,10 +71,10 @@ class BatteryAccess : public LtePhyBase
     private:
         /** @brief Copy constructor is not allowed.
          */
-        BatteryAccess(const MiximBatteryAccess&);
+        BatteryAccess(const BatteryAccess&);
         /** @brief Assignment operator is not allowed.
          */
-        MiximBatteryAccess& operator=(const MiximBatteryAccess&);
+        BatteryAccess& operator=(const BatteryAccess&);
 };
 
 #endif /* BATTERYACCESS_H_ */

@@ -17,12 +17,13 @@
  * notification on battery depletion, and provides time series and
  * summary information to Battery Stats module.
  */
-#include <BatteryStats.h>
+#include "BatteryStats.h"
 #include "SimpleBattery.h"
 
 #include <limits>
 
-//#include "FWMath.h"
+//#include <FWMath.h>
+#include "INETMath.h"
 #include "FindModule.h"
 
 /** @brief Checks if value %x is less or equal to null.
@@ -315,7 +316,8 @@ void SimpleBattery::deductAndCheck() {
 		debugEV<< simTime() << " residual capacity = " << residualCapacity << " fill state is " << estimateResidualRelative()*100.0 << "%" << endl;
 	}
 	// update display
-	if (host && ev.isGUI()) {
+	//if (host && ev.isGUI()) {
+    if (host && getEnvir()->isGUI()) {
 		const double dCapacityRatio = estimateResidualRelative();
 		if((dCapacityRatio < 0.8) && (dCapacityRatio > 0.6)) {
 			host->getDisplayString().setTagArg("i2",0,"status/battery_80");
@@ -427,7 +429,8 @@ void SimpleBattery::finish() {
 		}
 
 		// check that total time in all states matches simulation time
-		if (FWMath::round(SIMTIME_DBL(TotTime) * 1000000) - FWMath::round(SIMTIME_DBL(simTime()) * 1000000) != 0)
+		if (round(SIMTIME_DBL(TotTime) * 1000000) - round(SIMTIME_DBL(simTime()) * 1000000) != 0)
+		//if (FWMath::round(SIMTIME_DBL(TotTime) * 1000000) - FWMath::round(SIMTIME_DBL(simTime()) * 1000000) != 0) //FWMath deprecated. Replaced by INETMath
 		{
 			EV << "WARNING: device " << devices[i].name << " total time " << TotTime
 			   << "s != sim time " << simTime() << "s (may not matter)" << std::endl;
@@ -441,7 +444,8 @@ void SimpleBattery::finish() {
 			statsModule->detail(devices, numDevices);
 		}
 		else {
-			opp_warning("No BatteryStats module found, no statistic summary/details available.");
+			error("No BatteryStats module found, no statistic summary/details available.");
+			//opp_warning("No BatteryStats module found, no statistic summary/details available."); //opp_warning deprecated
 		}
 	}
 	cComponent::finish();

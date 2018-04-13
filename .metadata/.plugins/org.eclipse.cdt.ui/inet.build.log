@@ -1,8 +1,8 @@
-01:45:36 **** Incremental Build of configuration gcc-debug for project inet ****
+00:32:54 **** Incremental Build of configuration gcc-debug for project inet ****
 make MODE=debug CONFIGNAME=gcc-debug -j4 all 
 cd src && make all
 make[1]: Entering directory '/home/joelias/Dropbox/UFF/Pesquisa/lte-battery/inet/src'
 make[1]: Leaving directory '/home/joelias/Dropbox/UFF/Pesquisa/lte-battery/inet/src'
 
-01:45:36 Build Finished (took 269ms)
+00:32:54 Build Finished (took 271ms)
 

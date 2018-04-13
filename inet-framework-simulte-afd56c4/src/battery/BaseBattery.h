@@ -2,10 +2,11 @@
 #define BASE_BATTERY_H
 
 #include <omnetpp.h>
+#include "BaseModule.h"
 
+#include "BatteryDefs.h"
 //#include "MiXiMDefs.h"
-//#include "BaseModule.h"
-//#include "HostState.h"
+#include "HostState.h"
 
 /**
  * @brief Defines the amount of power drawn by a device from
@@ -66,7 +67,7 @@ public:
  * @ingroup power
  * @see SimpleBattery
  */
-class BaseBattery : public BaseModule {
+class INET_API BaseBattery : public BaseModule {
 private:
 	/** @brief Copy constructor is not allowed.
 	 */

@@ -1,460 +1,92 @@
-01:45:36 **** Incremental Build of configuration gcc-debug for project inet ****
+00:32:54 **** Incremental Build of configuration gcc-debug for project inet ****
 make MODE=debug CONFIGNAME=gcc-debug -j4 all 
 cd src && make all
 make[1]: Entering directory '/home/joelias/Dropbox/UFF/Pesquisa/lte-battery/inet/src'
 make[1]: Leaving directory '/home/joelias/Dropbox/UFF/Pesquisa/lte-battery/inet/src'
-01:45:36 **** Incremental Build of configuration gcc-debug for project inet-framework-simulte-afd56c4 ****
+00:32:55 **** Incremental Build of configuration gcc-debug for project inet-framework-simulte-afd56c4 ****
 make MODE=debug CONFIGNAME=gcc-debug -j4 all 
 cd src && make
 make[1]: Entering directory '/home/joelias/Dropbox/UFF/Pesquisa/lte-battery/inet-framework-simulte-afd56c4/src'
-common/lterecorder.cc
+battery/BatteryAccess.cc
 battery/BaseBattery.cc
+battery/BaseModule.cc
 battery/SimpleBattery.cc
-battery/MiximBatteryAccess.cc
-In file included from battery/BatteryAccess.h:13:0,
-                 from battery/MiximBatteryAccess.cc:8:
-battery/BaseBattery.h:69:39: error: expected class-name before '{' token
- class BaseBattery : public BaseModule {
-                                       ^
-battery/BaseBattery.h:126:10: error: 'HostState' does not name a type
-  virtual HostState::States getState() const = 0;
-          ^
-battery/BaseBattery.h: In constructor 'BaseBattery::BaseBattery()':
-battery/BaseBattery.h:79:18: error: class 'BaseBattery' does not have any field named 'BaseModule'
-  BaseBattery() : BaseModule()
-                  ^
-battery/BaseBattery.h: In constructor 'BaseBattery::BaseBattery(unsigned int)':
-battery/BaseBattery.h:81:36: error: class 'BaseBattery' does not have any field named 'BaseModule'
-  BaseBattery(unsigned stacksize) : BaseModule(stacksize)
-                                    ^
-In file included from battery/MiximBatteryAccess.cc:8:0:
-battery/BatteryAccess.h: At global scope:
-battery/BatteryAccess.h:24:1: error: expected class-name before '{' token
- {
- ^
-battery/BatteryAccess.h:71:29: error: 'MiximBatteryAccess' does not name a type
-         BatteryAccess(const MiximBatteryAccess&);
-                             ^
-battery/BatteryAccess.h:74:9: error: 'MiximBatteryAccess' does not name a type
-         MiximBatteryAccess& operator=(const MiximBatteryAccess&);
-         ^
-In file included from battery/MiximBatteryAccess.cc:12:0:
-../../inet/src/inet/common/FindModule.h:14:23: error: 'cModule' does not name a type
- template<typename T = cModule *const>
-                       ^
-../../inet/src/inet/common/FindModule.h:14:31: error: expected '>' before '*' token
- template<typename T = cModule *const>
-                               ^
-../../inet/src/inet/common/FindModule.h:24:34: error: 'cModule' does not name a type
-     static T findSubModule(const cModule *const top)
-                                  ^
-../../inet/src/inet/common/FindModule.h:57:12: error: 'cModule' does not name a type
-     static cModule *findHost(cModule *m)
-            ^
-../../inet/src/inet/common/FindModule.h:62:12: error: 'cModule' does not name a type
-     static cModule *findNetwork(cModule *m)
-            ^
-../../inet/src/inet/common/FindModule.h:70:18: error: 'cModule' does not name a type
-     static const cModule *findHost(const cModule *const m)
-                  ^
-../../inet/src/inet/common/FindModule.h:75:18: error: 'cModule' does not name a type
-     static const cModule *findNetwork(const cModule *const m)
-                  ^
-../../inet/src/inet/common/FindModule.h: In static member function 'static T inet::FindModule<T>::findSubModule(const int*)':
-../../inet/src/inet/common/FindModule.h:26:14: error: 'cModule' has not been declared
-         for (cModule::SubmoduleIterator i(top); !i.end(); i++) {
-              ^
-../../inet/src/inet/common/FindModule.h:26:50: error: 'i' was not declared in this scope
-         for (cModule::SubmoduleIterator i(top); !i.end(); i++) {
-                                                  ^
-../../inet/src/inet/common/FindModule.h:27:13: error: 'cModule' was not declared in this scope
-             cModule *const sub = i();
-             ^
-../../inet/src/inet/common/FindModule.h:27:13: note: suggested alternative:
-In file included from /home/joelias/omnetpp-5.0/include/omnetpp/cdisplaystring.h:21:0,
-                 from /home/joelias/omnetpp-5.0/include/omnetpp.h:37,
-                 from battery/BaseBattery.h:4,
-                 from battery/BatteryAccess.h:13,
-                 from battery/MiximBatteryAccess.cc:8:
-/home/joelias/omnetpp-5.0/include/omnetpp/cmodule.h:47:15: note:   'omnetpp::cModule'
- class SIM_API cModule : public cComponent //implies noncopyable
-               ^
-In file included from battery/MiximBatteryAccess.cc:12:0:
-../../inet/src/inet/common/FindModule.h:27:22: error: expected primary-expression before 'const'
-             cModule *const sub = i();
-                      ^
-../../inet/src/inet/common/FindModule.h:29:42: error: 'sub' was not declared in this scope
-             T dCastRet = dynamic_cast<T>(sub);
-                                          ^
-../../inet/src/inet/common/FindModule.h: In static member function 'static T inet::FindModule<T>::findGlobalModule()':
-../../inet/src/inet/common/FindModule.h:48:44: error: there are no arguments to 'getSimulation' that depend on a template parameter, so a declaration of 'getSimulation' must be available [-fpermissive]
-         return findSubModule(getSimulation()->getSystemModule());
-                                            ^
-../../inet/src/inet/common/FindModule.h:48:44: note: (if you use '-fpermissive', G++ will accept your code, but allowing the use of an undeclared name is deprecated)
-../../inet/src/inet/common/FindModule.h: At global scope:
-../../inet/src/inet/common/FindModule.h:87:23: error: 'cModule' does not name a type
- template<typename T = cModule>
-                       ^
-../../inet/src/inet/common/FindModule.h:114:8: error: expected ';' at end of member declaration
-     T *get(cModule *const from = nullptr)
-        ^
-../../inet/src/inet/common/FindModule.h:114:20: error: expected ')' before '*' token
-     T *get(cModule *const from = nullptr)
-                    ^
-battery/MiximBatteryAccess.cc:61:1: error: expected '}' at end of input
- }
- ^
-In file included from battery/MiximBatteryAccess.cc:12:0:
-../../inet/src/inet/common/FindModule.h:110:5: error: expected unqualified-id at end of input
-     }
-     ^
-../../inet/src/inet/common/FindModule.h:110:5: error: expected '}' at end of input
-In file included from battery/BaseBattery.cc:1:0:
-battery/BaseBattery.h:69:39: error: expected class-name before '{' token
- class BaseBattery : public BaseModule {
-                                       ^
-battery/BaseBattery.h:126:10: error: 'HostState' does not name a type
-  virtual HostState::States getState() const = 0;
-          ^
-battery/BaseBattery.h: In constructor 'BaseBattery::BaseBattery()':
-battery/BaseBattery.h:79:18: error: class 'BaseBattery' does not have any field named 'BaseModule'
-  BaseBattery() : BaseModule()
-                  ^
-battery/BaseBattery.h: In constructor 'BaseBattery::BaseBattery(unsigned int)':
-battery/BaseBattery.h:81:36: error: class 'BaseBattery' does not have any field named 'BaseModule'
-  BaseBattery(unsigned stacksize) : BaseModule(stacksize)
-                                    ^
-Makefile:341: recipe for target '../out/gcc-debug/src/battery/MiximBatteryAccess.o' failed
-make[1]: *** [../out/gcc-debug/src/battery/MiximBatteryAccess.o] Error 1
-make[1]: *** Waiting for unfinished jobs....
-make[1]: *** [../out/gcc-debug/src/battery/BaseBattery.o] Error 1
-Makefile:341: recipe for target '../out/gcc-debug/src/battery/BaseBattery.o' failed
-In file included from battery/BatteryStats.h__:21:0,
+battery/BatteryStats.cc
+epc/TrafficFlowFilter.cc
+epc/TrafficFlowFilterSimplified.cc
+In file included from battery/BatteryStats.h:20:0,
                  from battery/SimpleBattery.cc:20:
-battery/BaseBattery.h:69:39: error: expected class-name before '{' token
- class BaseBattery : public BaseModule {
-                                       ^
-battery/BaseBattery.h:126:10: error: 'HostState' does not name a type
-  virtual HostState::States getState() const = 0;
-          ^
-battery/BaseBattery.h: In constructor 'BaseBattery::BaseBattery()':
-battery/BaseBattery.h:79:18: error: class 'BaseBattery' does not have any field named 'BaseModule'
-  BaseBattery() : BaseModule()
-                  ^
-battery/BaseBattery.h: In constructor 'BaseBattery::BaseBattery(unsigned int)':
-battery/BaseBattery.h:81:36: error: class 'BaseBattery' does not have any field named 'BaseModule'
-  BaseBattery(unsigned stacksize) : BaseModule(stacksize)
-                                    ^
-In file included from battery/SimpleBattery.cc:20:0:
-battery/BatteryStats.h__: At global scope:
-battery/BatteryStats.h__:41:1: error: expected class-name before '{' token
- {
- ^
-battery/BatteryStats.h__:62:22: error: 'simsignalwrap_t' does not name a type
-         const static simsignalwrap_t catBatteryStateSignal;
-                      ^
-battery/BatteryStats.h__: In constructor 'BatteryStats::BatteryStats()':
-battery/BatteryStats.h__:52:5: error: class 'BatteryStats' does not have any field named 'BaseModule'
-   : BaseModule()
-     ^
-In file included from battery/SimpleBattery.cc:21:0:
-battery/SimpleBattery.h: At global scope:
-battery/SimpleBattery.h:56:37: error: 'HostState' does not name a type
-  virtual void handleHostState(const HostState& state);
-                                     ^
-battery/SimpleBattery.h:88:10: error: 'HostState' does not name a type
-  virtual HostState::States getState() const {
-          ^
-battery/SimpleBattery.h:124:2: error: 'HostState' does not name a type
-  HostState hostState;
-  ^
-In file included from battery/SimpleBattery.cc:26:0:
-../../inet/src/inet/common/FindModule.h: In static member function 'static omnetpp::cModule* inet::FindModule<T>::findHost(omnetpp::cModule*)':
-../../inet/src/inet/common/FindModule.h:59:36: error: there are no arguments to 'findContainingNode' that depend on a template parameter, so a declaration of 'findContainingNode' must be available [-fpermissive]
-         return findContainingNode(m);
-                                    ^
-../../inet/src/inet/common/FindModule.h:59:36: note: (if you use '-fpermissive', G++ will accept your code, but allowing the use of an undeclared name is deprecated)
-../../inet/src/inet/common/FindModule.h: In static member function 'static const omnetpp::cModule* inet::FindModule<T>::findHost(const omnetpp::cModule*)':
-../../inet/src/inet/common/FindModule.h:72:81: error: there are no arguments to 'findContainingNode' that depend on a template parameter, so a declaration of 'findContainingNode' must be available [-fpermissive]
-         return const_cast<cModule *>(findContainingNode(const_cast<cModule *>(m)));
-                                                                                 ^
-In file included from /home/joelias/omnetpp-5.0/include/omnetpp/cobject.h:26:0,
-                 from /home/joelias/omnetpp-5.0/include/omnetpp/cnamedobject.h:23,
-                 from /home/joelias/omnetpp-5.0/include/omnetpp/cownedobject.h:23,
-                 from /home/joelias/omnetpp-5.0/include/omnetpp/carray.h:19,
-                 from /home/joelias/omnetpp-5.0/include/omnetpp.h:21,
-                 from battery/BatteryStats.h__:16,
-                 from battery/SimpleBattery.cc:20:
-battery/SimpleBattery.cc: In function 'omnetpp::cObject* __factoryfunc_36()':
-battery/SimpleBattery.cc:36:15: error: cannot convert 'SimpleBattery*' to 'omnetpp::cModule*' in initialization
- Define_Module(SimpleBattery);
-               ^
-/home/joelias/omnetpp-5.0/include/omnetpp/regmacros.h:144:92: note: in definition of macro '__REGISTER_CLASS'
-   static omnetpp::cObject *MAKE_UNIQUE_WITHIN_FILE(__factoryfunc_)() {BASECLASS *ret = new CLASSNAME; return ret; } \
-                                                                                            ^
-battery/SimpleBattery.cc:36:1: note: in expansion of macro 'Define_Module'
- Define_Module(SimpleBattery);
- ^
-battery/SimpleBattery.cc: In constructor 'SimpleBattery::SimpleBattery()':
-battery/SimpleBattery.cc:50:4: error: class 'SimpleBattery' does not have any field named 'hostState'
-  , hostState()
-    ^
 battery/SimpleBattery.cc: In member function 'virtual void SimpleBattery::initialize(int)':
-battery/SimpleBattery.cc:64:2: error: 'initialize' is not a member of 'BaseBattery'
-  BaseBattery::initialize(stage);
-  ^
-battery/SimpleBattery.cc:67:26: error: 'par' was not declared in this scope
-   voltage = par("voltage");
-                          ^
-battery/SimpleBattery.cc:70:42: error: 'error' was not declared in this scope
-    error("invalid nominal capacity value");
-                                          ^
-battery/SimpleBattery.cc:81:47: error: 'scheduleAt' was not declared in this scope
-    scheduleAt(simTime() + publishTime, publish);
-                                               ^
-battery/SimpleBattery.cc:86:38: error: 'error' was not declared in this scope
-    error("invalid publishDelta value");
-                                      ^
-battery/SimpleBattery.cc:91:3: error: 'debugEV' was not declared in this scope
+battery/BaseModule.h:35:18: error: 'ev' was not declared in this scope
+ #define debugEV (ev.isDisabled()||!debug) ? ev : ev << logName() << "::" << getClassName() << ": "
+                  ^
+battery/SimpleBattery.cc:92:3: note: in expansion of macro 'debugEV'
    debugEV<< "capacity = " << capmAh << "mA-h (nominal = " << nominalCapmAh <<
    ^
-battery/SimpleBattery.cc:113:45: error: 'scheduleAt' was not declared in this scope
-   scheduleAt(simTime() + resolution, timeout);
-                                             ^
-battery/SimpleBattery.cc:117:35: error: 'hasPar' was not declared in this scope
-   numDevices = hasPar("numDevices") ? par("numDevices") : 0;
-                                   ^
-battery/SimpleBattery.cc:126:19: error: 'findHost' was not declared in this scope
-   host = findHost();
-                   ^
-battery/SimpleBattery.cc:129:3: error: 'hostState' was not declared in this scope
-   hostState.set(HostState::ACTIVE);
-   ^
-battery/SimpleBattery.cc:129:17: error: 'HostState' has not been declared
-   hostState.set(HostState::ACTIVE);
-                 ^
-battery/SimpleBattery.cc:130:8: error: 'catHostStateSignal' was not declared in this scope
-   emit(catHostStateSignal.initialize(), &hostState);
-        ^
-battery/SimpleBattery.cc:130:51: error: 'emit' was not declared in this scope
-   emit(catHostStateSignal.initialize(), &hostState);
-                                                   ^
-battery/SimpleBattery.cc:134:9: error: 'catBatteryStateSignal' is not a member of 'BatteryStats'
-    emit(BatteryStats::catBatteryStateSignal.initialize(), batteryState);
-         ^
-battery/SimpleBattery.cc:137:4: error: 'catBatteryStateSignal' is not a member of 'BatteryStats'
-    BatteryStats::catBatteryStateSignal.initialize();
-    ^
 battery/SimpleBattery.cc: In member function 'virtual int SimpleBattery::registerDevice(const string&, int)':
-battery/SimpleBattery.cc:147:101: error: 'error' was not declared in this scope
-   error("To much devices registered with battery. Please adjust the Batteries numDevices parameter!");
-                                                                                                     ^
-battery/SimpleBattery.cc:151:37: error: 'error' was not declared in this scope
-   error("device already registered!");
-                                     ^
-battery/SimpleBattery.cc:157:50: error: 'error' was not declared in this scope
-   error("number of activities must be at least 1");
-                                                  ^
-battery/SimpleBattery.cc:173:2: error: 'debugEV' was not declared in this scope
+battery/BaseModule.h:35:18: error: 'ev' was not declared in this scope
+ #define debugEV (ev.isDisabled()||!debug) ? ev : ev << logName() << "::" << getClassName() << ": "
+                  ^
+battery/SimpleBattery.cc:174:2: note: in expansion of macro 'debugEV'
   debugEV<< "initialized device " << devices[deviceID].name << " as device "
   ^
 battery/SimpleBattery.cc: In member function 'virtual void SimpleBattery::draw(int, DrawAmount&, int)':
-battery/SimpleBattery.cc:183:29: error: 'error' was not declared in this scope
-   error("Unknown device ID!");
-                             ^
-battery/SimpleBattery.cc:189:44: error: 'error' was not declared in this scope
-    error("drawMsg from unregistered device");
-                                            ^
-battery/SimpleBattery.cc:194:35: error: 'error' was not declared in this scope
-    error("invalid CURRENT message");
-                                   ^
-battery/SimpleBattery.cc:196:3: error: 'debugEV' was not declared in this scope
+battery/BaseModule.h:35:18: error: 'ev' was not declared in this scope
+ #define debugEV (ev.isDisabled()||!debug) ? ev : ev << logName() << "::" << getClassName() << ": "
+                  ^
+battery/SimpleBattery.cc:197:3: note: in expansion of macro 'debugEV'
    debugEV << simTime() << " device " << deviceID <<
    ^
-battery/SimpleBattery.cc:211:44: error: 'error' was not declared in this scope
-    error("drawMsg from unregistered device");
-                                            ^
-battery/SimpleBattery.cc:215:38: error: 'error' was not declared in this scope
-    error("invalid activity specified");
-                                      ^
-battery/SimpleBattery.cc:218:3: error: 'debugEV' was not declared in this scope
+battery/BaseModule.h:35:18: error: 'ev' was not declared in this scope
+ #define debugEV (ev.isDisabled()||!debug) ? ev : ev << logName() << "::" << getClassName() << ": "
+                  ^
+battery/SimpleBattery.cc:219:3: note: in expansion of macro 'debugEV'
    debugEV << simTime() << " device " << deviceID <<
    ^
-battery/SimpleBattery.cc:237:30: error: 'error' was not declared in this scope
-   error("Unknown power type!");
-                              ^
-battery/SimpleBattery.cc: In member function 'virtual void SimpleBattery::handleMessage(omnetpp::cMessage*)':
-battery/SimpleBattery.cc:247:46: error: 'scheduleAt' was not declared in this scope
-    scheduleAt(simTime() + resolution, timeout);
-                                              ^
-battery/SimpleBattery.cc:253:9: error: 'catBatteryStateSignal' is not a member of 'BatteryStats'
-    emit(BatteryStats::catBatteryStateSignal, batteryState);
-         ^
-battery/SimpleBattery.cc:253:58: error: 'emit' was not declared in this scope
-    emit(BatteryStats::catBatteryStateSignal, batteryState);
-                                                          ^
-battery/SimpleBattery.cc:260:47: error: 'error' was not declared in this scope
-    error("battery receives mysterious timeout");
-                                               ^
-battery/SimpleBattery.cc:264:29: error: 'error' was not declared in this scope
-   error("unexpected message");
-                             ^
-battery/SimpleBattery.cc: At global scope:
-battery/SimpleBattery.cc:269:43: error: 'HostState' does not name a type
- void SimpleBattery::handleHostState(const HostState& /*state*/)
-                                           ^
-In file included from /home/joelias/omnetpp-5.0/include/omnetpp/cownedobject.h:22:0,
-                 from /home/joelias/omnetpp-5.0/include/omnetpp/carray.h:19,
-                 from /home/joelias/omnetpp-5.0/include/omnetpp.h:21,
-                 from battery/BatteryStats.h__:16,
-                 from battery/SimpleBattery.cc:20:
 battery/SimpleBattery.cc: In member function 'virtual void SimpleBattery::deductAndCheck()':
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:123:76: error: no matching function for call to 'omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(SimpleBattery*)'
- #define Enter_Method_Silent  omnetpp::cMethodCallContextSwitcher __ctx(this); __ctx.methodCallSilent
-                                                                            ^
-battery/SimpleBattery.cc:275:2: note: in expansion of macro 'Enter_Method_Silent'
-  Enter_Method_Silent();
-  ^
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:123:76: note: candidates are:
- #define Enter_Method_Silent  omnetpp::cMethodCallContextSwitcher __ctx(this); __ctx.methodCallSilent
-                                                                            ^
-battery/SimpleBattery.cc:275:2: note: in expansion of macro 'Enter_Method_Silent'
-  Enter_Method_Silent();
-  ^
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:162:5: note: omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const omnetpp::cComponent*)
-     cMethodCallContextSwitcher(const cComponent *newContext);
-     ^
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:162:5: note:   no known conversion for argument 1 from 'SimpleBattery*' to 'const omnetpp::cComponent*'
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:152:15: note: constexpr omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const omnetpp::cMethodCallContextSwitcher&)
- class SIM_API cMethodCallContextSwitcher : public cContextSwitcher
-               ^
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:152:15: note:   no known conversion for argument 1 from 'SimpleBattery*' to 'const omnetpp::cMethodCallContextSwitcher&'
-battery/SimpleBattery.cc:315:3: error: 'debugEV' was not declared in this scope
+battery/BaseModule.h:35:18: error: 'ev' was not declared in this scope
+ #define debugEV (ev.isDisabled()||!debug) ? ev : ev << logName() << "::" << getClassName() << ": "
+                  ^
+battery/SimpleBattery.cc:316:3: note: in expansion of macro 'debugEV'
    debugEV<< simTime() << " residual capacity = " << residualCapacity << " fill state is " << estimateResidualRelative()*100.0 << "%" << endl;
    ^
-battery/SimpleBattery.cc:318:14: error: 'ev' was not declared in this scope
-  if (host && ev.isGUI()) {
-              ^
-battery/SimpleBattery.cc:345:3: error: 'hostState' was not declared in this scope
-   hostState.set(HostState::FAILED);
-   ^
-battery/SimpleBattery.cc:345:17: error: 'HostState' has not been declared
-   hostState.set(HostState::FAILED);
-                 ^
-battery/SimpleBattery.cc:346:8: error: 'catHostStateSignal' was not declared in this scope
-   emit(catHostStateSignal, &hostState);
-        ^
-battery/SimpleBattery.cc:346:38: error: 'emit' was not declared in this scope
-   emit(catHostStateSignal, &hostState);
-                                      ^
-battery/SimpleBattery.cc:351:9: error: 'catBatteryStateSignal' is not a member of 'BatteryStats'
-    emit(BatteryStats::catBatteryStateSignal, batteryState);
-         ^
-battery/SimpleBattery.cc:356:22: error: 'cancelEvent' was not declared in this scope
-   cancelEvent(timeout);
-                      ^
-battery/SimpleBattery.cc:364:9: error: 'catBatteryStateSignal' is not a member of 'BatteryStats'
-    emit(BatteryStats::catBatteryStateSignal, batteryState);
-         ^
-battery/SimpleBattery.cc:364:58: error: 'emit' was not declared in this scope
-    emit(BatteryStats::catBatteryStateSignal, batteryState);
-                                                          ^
-In file included from /home/joelias/omnetpp-5.0/include/omnetpp/cownedobject.h:22:0,
-                 from /home/joelias/omnetpp-5.0/include/omnetpp/carray.h:19,
-                 from /home/joelias/omnetpp-5.0/include/omnetpp.h:21,
-                 from battery/BatteryStats.h__:16,
-                 from battery/SimpleBattery.cc:20:
-battery/SimpleBattery.cc: In member function 'virtual double SimpleBattery::getVoltage() const':
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:123:76: error: no matching function for call to 'omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const SimpleBattery*)'
- #define Enter_Method_Silent  omnetpp::cMethodCallContextSwitcher __ctx(this); __ctx.methodCallSilent
-                                                                            ^
-battery/SimpleBattery.cc:379:2: note: in expansion of macro 'Enter_Method_Silent'
-  Enter_Method_Silent();
-  ^
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:123:76: note: candidates are:
- #define Enter_Method_Silent  omnetpp::cMethodCallContextSwitcher __ctx(this); __ctx.methodCallSilent
-                                                                            ^
-battery/SimpleBattery.cc:379:2: note: in expansion of macro 'Enter_Method_Silent'
-  Enter_Method_Silent();
-  ^
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:162:5: note: omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const omnetpp::cComponent*)
-     cMethodCallContextSwitcher(const cComponent *newContext);
-     ^
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:162:5: note:   no known conversion for argument 1 from 'const SimpleBattery*' to 'const omnetpp::cComponent*'
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:152:15: note: constexpr omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const omnetpp::cMethodCallContextSwitcher&)
- class SIM_API cMethodCallContextSwitcher : public cContextSwitcher
-               ^
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:152:15: note:   no known conversion for argument 1 from 'const SimpleBattery*' to 'const omnetpp::cMethodCallContextSwitcher&'
-battery/SimpleBattery.cc: In member function 'virtual double SimpleBattery::estimateResidualAbs() const':
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:123:76: error: no matching function for call to 'omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const SimpleBattery*)'
- #define Enter_Method_Silent  omnetpp::cMethodCallContextSwitcher __ctx(this); __ctx.methodCallSilent
-                                                                            ^
-battery/SimpleBattery.cc:390:2: note: in expansion of macro 'Enter_Method_Silent'
-  Enter_Method_Silent();
-  ^
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:123:76: note: candidates are:
- #define Enter_Method_Silent  omnetpp::cMethodCallContextSwitcher __ctx(this); __ctx.methodCallSilent
-                                                                            ^
-battery/SimpleBattery.cc:390:2: note: in expansion of macro 'Enter_Method_Silent'
-  Enter_Method_Silent();
-  ^
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:162:5: note: omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const omnetpp::cComponent*)
-     cMethodCallContextSwitcher(const cComponent *newContext);
-     ^
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:162:5: note:   no known conversion for argument 1 from 'const SimpleBattery*' to 'const omnetpp::cComponent*'
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:152:15: note: constexpr omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const omnetpp::cMethodCallContextSwitcher&)
- class SIM_API cMethodCallContextSwitcher : public cContextSwitcher
-               ^
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:152:15: note:   no known conversion for argument 1 from 'const SimpleBattery*' to 'const omnetpp::cMethodCallContextSwitcher&'
-battery/SimpleBattery.cc: In member function 'virtual double SimpleBattery::estimateResidualRelative() const':
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:123:76: error: no matching function for call to 'omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const SimpleBattery*)'
- #define Enter_Method_Silent  omnetpp::cMethodCallContextSwitcher __ctx(this); __ctx.methodCallSilent
-                                                                            ^
-battery/SimpleBattery.cc:401:2: note: in expansion of macro 'Enter_Method_Silent'
-  Enter_Method_Silent();
-  ^
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:123:76: note: candidates are:
- #define Enter_Method_Silent  omnetpp::cMethodCallContextSwitcher __ctx(this); __ctx.methodCallSilent
-                                                                            ^
-battery/SimpleBattery.cc:401:2: note: in expansion of macro 'Enter_Method_Silent'
-  Enter_Method_Silent();
-  ^
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:162:5: note: omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const omnetpp::cComponent*)
-     cMethodCallContextSwitcher(const cComponent *newContext);
-     ^
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:162:5: note:   no known conversion for argument 1 from 'const SimpleBattery*' to 'const omnetpp::cComponent*'
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:152:15: note: constexpr omnetpp::cMethodCallContextSwitcher::cMethodCallContextSwitcher(const omnetpp::cMethodCallContextSwitcher&)
- class SIM_API cMethodCallContextSwitcher : public cContextSwitcher
-               ^
-/home/joelias/omnetpp-5.0/include/omnetpp/simutil.h:152:15: note:   no known conversion for argument 1 from 'const SimpleBattery*' to 'const omnetpp::cMethodCallContextSwitcher&'
 battery/SimpleBattery.cc: In member function 'virtual void SimpleBattery::finish()':
-battery/SimpleBattery.cc:421:3: error: 'debugEV' was not declared in this scope
+battery/BaseModule.h:35:18: error: 'ev' was not declared in this scope
+ #define debugEV (ev.isDisabled()||!debug) ? ev : ev << logName() << "::" << getClassName() << ": "
+                  ^
+battery/SimpleBattery.cc:423:3: note: in expansion of macro 'debugEV'
    debugEV << "device " << i << " (" << devices[i].name << ") consumed "
    ^
-battery/SimpleBattery.cc:430:7: error: 'FWMath' has not been declared
-   if (FWMath::round(SIMTIME_DBL(TotTime) * 1000000) - FWMath::round(SIMTIME_DBL(simTime()) * 1000000) != 0)
-       ^
-battery/SimpleBattery.cc:430:55: error: 'FWMath' has not been declared
-   if (FWMath::round(SIMTIME_DBL(TotTime) * 1000000) - FWMath::round(SIMTIME_DBL(simTime()) * 1000000) != 0)
-                                                       ^
-battery/SimpleBattery.cc:444:87: error: 'opp_warning' was not declared in this scope
-    opp_warning("No BatteryStats module found, no statistic summary/details available.");
-                                                                                       ^
-battery/SimpleBattery.cc:447:21: error: cannot call member function 'virtual void omnetpp::cComponent::finish()' without object
-  cComponent::finish();
-                     ^
-battery/SimpleBattery.cc: In destructor 'virtual SimpleBattery::~SimpleBattery()':
-battery/SimpleBattery.cc:451:25: error: 'cancelAndDelete' was not declared in this scope
-  cancelAndDelete(timeout);
-                         ^
-In file included from battery/SimpleBattery.cc:26:0:
+In file included from battery/SimpleBattery.cc:27:0:
 ../../inet/src/inet/common/FindModule.h: In instantiation of 'static T inet::FindModule<T>::findSubModule(const omnetpp::cModule*) [with T = BatteryStats*]':
-battery/SimpleBattery.cc:438:58:   required from here
-../../inet/src/inet/common/FindModule.h:27:36: warning: 'omnetpp::cModule* omnetpp::cModule::SubmoduleIterator::operator()() const' is deprecated (declared at /home/joelias/omnetpp-5.0/include/omnetpp/cmodule.h:161) [-Wdeprecated-declarations]
+battery/SimpleBattery.cc:441:58:   required from here
+../../inet/src/inet/common/FindModule.h:28:36: warning: 'omnetpp::cModule* omnetpp::cModule::SubmoduleIterator::operator()() const' is deprecated (declared at /home/joelias/omnetpp-5.0/include/omnetpp/cmodule.h:161) [-Wdeprecated-declarations]
              cModule *const sub = i();
                                     ^
-Makefile:341: recipe for target '../out/gcc-debug/src/battery/SimpleBattery.o' failed
+epc/gtp/TftControlInfo.cc
+In file included from battery/BatteryStats.h:20:0,
+                 from battery/BatteryStats.cc:29:
+battery/BatteryStats.cc: In member function 'virtual void BatteryStats::initialize(int)':
+battery/BaseModule.h:35:18: error: 'ev' was not declared in this scope
+ #define debugEV (ev.isDisabled()||!debug) ? ev : ev << logName() << "::" << getClassName() << ": "
+                  ^
+battery/BatteryStats.cc:45:5: note: in expansion of macro 'debugEV'
+     debugEV << "show details = " << doDetail << endl;
+     ^
+epc/gtp/GtpUser.cc
+epc/TrafficFlowFilterSimplified.cc: In member function 'EpcNodeType TrafficFlowFilterSimplified::selectOwnerType(const char*)':
+epc/TrafficFlowFilterSimplified.cc:41:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
 make[1]: *** [../out/gcc-debug/src/battery/SimpleBattery.o] Error 1
-make[1]: Leaving directory '/home/joelias/Dropbox/UFF/Pesquisa/lte-battery/inet-framework-simulte-afd56c4/src'
+make[1]: *** Waiting for unfinished jobs....
+Makefile:343: recipe for target '../out/gcc-debug/src/battery/SimpleBattery.o' failed
+epc/gtp/GtpUser.cc: In member function 'void GtpUser::handleFromUdp(GtpUserMsg*)':
+epc/gtp/GtpUser.cc:104:39: warning: unused variable 'nextTeid' [-Wunused-variable]
+     TunnelEndpointIdentifier oldTeid, nextTeid;
+                                       ^
+make[1]: *** [../out/gcc-debug/src/battery/BatteryStats.o] Error 1
+Makefile:343: recipe for target '../out/gcc-debug/src/battery/BatteryStats.o' failed
 make: *** [all] Error 2
+make[1]: Leaving directory '/home/joelias/Dropbox/UFF/Pesquisa/lte-battery/inet-framework-simulte-afd56c4/src'
 Makefile:2: recipe for target 'all' failed

@@ -19,6 +19,7 @@
 #include <omnetpp.h>
 
 //#include "MiXiMDefs.h"
+#include "BatteryDefs.h"
 
 /**
  * @brief residual capacity of battery

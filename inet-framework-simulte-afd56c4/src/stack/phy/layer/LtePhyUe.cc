@@ -49,7 +49,7 @@ void LtePhyUe::initialize(int stage)
         handoverLatency_ = par("handoverLatency").doubleValue();
 
         // disabled
-        useBattery_ = false;
+        useBattery_ = true;
 
         enableHandover_ = par("enableHandover");
         enableHandover_ = par("enableHandover"); // TODO : USE IT

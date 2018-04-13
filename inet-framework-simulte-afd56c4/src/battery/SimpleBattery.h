@@ -16,10 +16,11 @@
 #include <omnetpp.h>
 
 //#include "MiXiMDefs.h"
+#include "BatteryDefs.h"
 #include "BaseBattery.h"
 
 #include "BatteryState.h"
-//#include "HostState.h"
+#include "HostState.h"
 
 #include "inet/common/NotifierConsts.h"
 #include "DeviceEntry.h"

@@ -9780,3 +9780,6 @@ org.eclipse.core.internal.resources.ResourceException: Resource '/inet-framework
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
 !SUBENTRY 1 org.eclipse.core.resources 4 368 2018-04-11 01:45:33.799
 !MESSAGE Resource '/inet-framework-simulte-afd56c4/src/battery/BatteryStats.h' does not exist.
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-12 23:54:38.892
+!MESSAGE Indexed 'inet-framework-simulte-afd56c4' (150 sources, 613 headers) in 16.6 sec: 60,673 declarations; 185,315 references; 0 unresolved inclusions; 0 syntax errors; 67 unresolved names (0.027%)

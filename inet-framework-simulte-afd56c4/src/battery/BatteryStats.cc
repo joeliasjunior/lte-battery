@@ -26,15 +26,15 @@
  * does this as well, but for now estimate just follows redisual
  * capacity.)
  */
-#include <BatteryStats.h__>
+#include "BatteryStats.h"
 #include <iostream>
 
 #include "BatteryState.h"
-//#include "DeviceEntry.h"
+#include "DeviceEntry.h"
 
 Define_Module(BatteryStats);
 
-const simsignalwrap_t BatteryStats::catBatteryStateSignal = simsignalwrap_t(MIXIM_SIGNAL_BATTERY_CHANGE_NAME);
+const simsignalwrap_t BatteryStats::catBatteryStateSignal = simsignalwrap_t(BATTERY_SIGNAL_HOSTSTATE_NAME);
 
 void BatteryStats::initialize(int stage)
 {

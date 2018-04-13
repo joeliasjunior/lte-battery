@@ -20,6 +20,7 @@
 #define DEVICEENTRY_H
 
 //#include "MiXiMDefs.h"
+#include "BatteryDefs.h"
 
 /** @brief per-device/per-account record of battery consumption, is
  * passed to BatteryStats on finish()
