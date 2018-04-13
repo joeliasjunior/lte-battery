@@ -29,11 +29,14 @@
 #include "HostState.h"
 #include "inet/common/NotifierConsts.h"
 
-//#ifndef debugEV
-//#define debugEV_clear (ev.isDisabled()||!debug) ? ev : ev
-////#define debugEV (ev.isDisabled()||!debug) ? ev : ev << logName() << "::" << getClassName() << ": "
-#define debugEV (ev.isDisabled()||!debug) ? ev : ev << logName() << "::" << getClassName() << ": "
-//#endif
+#ifndef debugEV
+/*#define debugEV_clear (ev.isDisabled()||!debug) ? ev : ev
+//#define debugEV (ev.isDisabled()||!debug) ? ev : ev << logName() << "::" << getClassName() << ": "
+// ev macro have been removed, so getEnvir() function will be used instead.
+*/
+#define debugEV_clear (!getEnvir()||!debug) ? getEnvir() : getEnvir()
+#define debugEV (!getEnvir()||!debug) ? getEnvir() : getEnvir() << logName() << "::" << getClassName() << ": "
+#endif
 
 #ifndef coreEV
 #define coreEV_clear (ev.isDisabled()||!coreDebug) ? ev : ev

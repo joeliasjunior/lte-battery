@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="completion_proposal_size">
+	</section>
+	<section name="PDOMSearchPage">
+		<item value="227191" key="searchFlags"/>
+		<item value="false" key="caseSensitive"/>
+		<list key="previousPatterns">
+			<item value="isDisabled"/>
+			<item value="isGUI"/>
+			<item value="passedmsg"/>
+			<item value="round"/>
+			<item value="findSubModule"/>
+			<item value="cObject"/>
+			<item value="cSimpleObject"/>
+			<item value="FWMath"/>
+			<item value="registerWithBattery"/>
+			<item value="NF_INTERFACE_STATE_CHANGED"/>
+			<item value="simsignalwrap_t"/>
+			<item value="cMessage"/>
+			<item value="hoststate"/>
+		</list>
+	</section>
+	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
+		<item value="388" key="DIALOG_WIDTH"/>
+		<item value="61" key="DIALOG_Y_ORIGIN"/>
+		<item value="487" key="DIALOG_HEIGHT"/>
+		<item value="492" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Noto Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+	</section>
+</section>
