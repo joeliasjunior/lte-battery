@@ -30,7 +30,7 @@ void BatteryAccess::registerWithBattery(const std::string& name, int numAccounts
 
 	if(!battery) {
 		//opp_warning("No battery module defined!");
-		error("No battery module defined!");
+	    throw cException("No battery module defined!");
 	} else {
 		deviceID = battery->registerDevice(name, numAccounts);
 	}

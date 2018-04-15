@@ -30,12 +30,12 @@
 #include "inet/common/NotifierConsts.h"
 
 #ifndef debugEV
-/*#define debugEV_clear (ev.isDisabled()||!debug) ? ev : ev
+//#define debugEV_clear (ev.isDisabled()||!debug) ? ev : ev
 //#define debugEV (ev.isDisabled()||!debug) ? ev : ev << logName() << "::" << getClassName() << ": "
 // ev macro have been removed, so getEnvir() function will be used instead.
-*/
-#define debugEV_clear (!getEnvir()||!debug) ? getEnvir() : getEnvir()
-#define debugEV (!getEnvir()||!debug) ? getEnvir() : getEnvir() << logName() << "::" << getClassName() << ": "
+//*/
+#define debugEV_clear (!getEnvir()||!debug) ? EV : EV
+#define debugEV (!getEnvir()||!debug) ? EV : EV << logName() << "::" << getClassName() << ": "
 #endif
 
 #ifndef coreEV

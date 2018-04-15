@@ -65,7 +65,7 @@ void BaseModule::receiveSignal(cComponent */*source*/, simsignal_t signalID, cOb
 			handleHostState(*pHostState);
 		}
 		else {
-		    error("Got catHostStateSignal but obj was not a HostState pointer?");
+		    throw cException("Got catHostStateSignal but obj was not a HostState pointer?");
 			//opp_warning("Got catHostStateSignal but obj was not a HostState pointer?"); //opp_warning deprecated
 		}
 	}
@@ -77,7 +77,8 @@ void BaseModule::handleHostState(const HostState& state)
 		return;
 
 	if(state.get() != HostState::ACTIVE) {
-		error("Hosts state changed to something else than active which"
+	    //opp_warning("Hosts state changed to something else than active which"
+	    throw cException("Hosts state changed to something else than active which"
 			  " is not handled by this module. Either handle this state"
 			  " correctly or if this module really isn't affected by the"
 			  " hosts state set the parameter \"notAffectedByHostState\""
