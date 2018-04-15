@@ -32,7 +32,8 @@ class BatteryAccess : public BaseModule
         /** @brief This devices id for the battery module. */
         int deviceID;
 
-    protected:
+    // JINSERT protected:
+    public:
         /**
          * @brief Registers this module as a device with the battery module.
          *

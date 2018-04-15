@@ -1,33 +1,11 @@
-14:33:39 **** Incremental Build of configuration gcc-debug for project inet-framework-simulte-afd56c4 ****
+15:17:39 **** Incremental Build of configuration gcc-debug for project inet-framework-simulte-afd56c4 ****
 make MODE=debug CONFIGNAME=gcc-debug -j4 all 
 cd src && make
 make[1]: Entering directory '/home/joelias/Dropbox/UFF/Pesquisa/lte-battery/inet-framework-simulte-afd56c4/src'
-stack/phy/layer/LtePhyUeD2D.cc
 stack/phy/layer/LtePhyUe.cc
-stack/phy/layer/LtePhyUeD2D.cc: In member function 'virtual void LtePhyUeD2D::handleAirFrame(omnetpp::cMessage*)':
-stack/phy/layer/LtePhyUeD2D.cc:72:9: error: 'BatteryAccess' has not been declared
-         BatteryAccess::drawCurrent(rxAmount_, 0);
-         ^
-stack/phy/layer/LtePhyUeD2D.cc: In member function 'virtual void LtePhyUeD2D::handleUpperMessage(omnetpp::cMessage*)':
-stack/phy/layer/LtePhyUeD2D.cc:244:9: error: 'BatteryAccess' has not been declared
-         BatteryAccess::drawCurrent(txAmount_, 1);
-         ^
-stack/phy/layer/LtePhyUe.cc: In member function 'virtual void LtePhyUe::initialize(int)':
-stack/phy/layer/LtePhyUe.cc:81:44: error: 'registerWithBattery' was not declared in this scope
-             registerWithBattery("LtePhy", 2);
-                                            ^
-stack/phy/layer/LtePhyUe.cc: In member function 'virtual void LtePhyUe::handleAirFrame(omnetpp::cMessage*)':
-stack/phy/layer/LtePhyUe.cc:288:48: error: cannot call member function 'void BatteryAccess::drawCurrent(double, int)' without object
-         BatteryAccess::drawCurrent(rxAmount_, 0);
-                                                ^
-Makefile:343: recipe for target '../out/gcc-debug/src/stack/phy/layer/LtePhyUeD2D.o' failed
-make[1]: *** [../out/gcc-debug/src/stack/phy/layer/LtePhyUeD2D.o] Error 1
-make[1]: *** Waiting for unfinished jobs....
-make[1]: *** [../out/gcc-debug/src/stack/phy/layer/LtePhyUe.o] Error 1
-Makefile:343: recipe for target '../out/gcc-debug/src/stack/phy/layer/LtePhyUe.o' failed
-make: *** [all] Error 2
+stack/phy/layer/LtePhyUeD2D.cc
+Creating shared library: ../out/gcc-debug/src/libinet-framework-simulte-afd56c4.so
 make[1]: Leaving directory '/home/joelias/Dropbox/UFF/Pesquisa/lte-battery/inet-framework-simulte-afd56c4/src'
-Makefile:2: recipe for target 'all' failed
 
-14:33:47 Build Finished (took 8s.558ms)
+15:17:52 Build Finished (took 13s.309ms)
 

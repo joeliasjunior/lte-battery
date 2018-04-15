@@ -78,7 +78,8 @@ void LtePhyUe::initialize(int stage)
             // TODO register the device to the battery with two accounts, e.g. 0=tx and 1=rx
             // it only affects statistics
             // JINSERT uncommented code.
-            registerWithBattery("LtePhy", 2);
+            BatteryAccess ba;
+            ba.registerWithBattery("LtePhy", 2);
             txAmount_ = par("batteryTxCurrentAmount");
             rxAmount_ = par("batteryRxCurrentAmount");
 
@@ -286,7 +287,8 @@ void LtePhyUe::handleAirFrame(cMessage* msg)
     {
         //TODO BatteryAccess::drawCurrent(rxAmount_, 0);
         //JINSERT uncommented code.
-        BatteryAccess::drawCurrent(rxAmount_, 0);
+        BatteryAccess ba;
+        ba.drawCurrent(rxAmount_, 0);
     }
     connectedNodeId_ = masterId_;
     LteAirFrame* frame = check_and_cast<LteAirFrame*>(msg);
@@ -413,7 +415,9 @@ void LtePhyUe::handleUpperMessage(cMessage* msg)
 {
     //JINSERT uncommented code
     if (useBattery_) {
-    TODO     BatteryAccess::drawCurrent(txAmount_, 1);
+    //TODO     BatteryAccess::drawCurrent(txAmount_, 1);
+        BatteryAccess ba;
+        ba.drawCurrent(txAmount_, 1);
     }
 
     UserControlInfo* lteInfo = check_and_cast<UserControlInfo*>(msg->getControlInfo());
