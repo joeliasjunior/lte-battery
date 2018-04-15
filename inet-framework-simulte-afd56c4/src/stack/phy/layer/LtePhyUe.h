@@ -14,6 +14,7 @@
 #include "DasFilter.h"
 #include "LteMacUe.h"
 #include "LteRlcUm.h"
+#include "SimpleBattery.h" //JINSERT Included SimpleBattery library
 
 class DasFilter;
 
@@ -85,9 +86,9 @@ class LtePhyUe : public LtePhyBase
     double dasRssiThreshold_;
 
     /** set to false if a battery is not present in module or must have infinite capacity */
-    bool useBattery_;
-    double txAmount_;    // drawn current amount for tx operations (mA)
-    double rxAmount_;    // drawn current amount for rx operations (mA)
+    bool useBattery_;    //JINSERT
+    double txAmount_;    //JINSERT drawn current amount for tx operations (mA)
+    double rxAmount_;    //JINSERT drawn current amount for rx operations (mA)
 
     LteMacUe *mac_;
     LteRlcUm *rlcUm_;
@@ -116,7 +117,9 @@ class LtePhyUe : public LtePhyBase
      * event to the blackboard. The event is caught by baseModule's receiveBBItem
      * which in turn calls handleHostState method, here inherited and redefined.
      */
-    //virtual void handleHostState(const HostState& state);
+    //JINSERT the following line was uncommented from: virtual void handleHostState(const HostState& state);
+    virtual void handleHostState(const HostState& state);
+
     /**
      * Utility function to update the hysteresis threshold using hysteresisFactor_.
      */

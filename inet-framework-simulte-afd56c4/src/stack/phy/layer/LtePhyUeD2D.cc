@@ -11,6 +11,7 @@
 #include "LtePhyUeD2D.h"
 #include "LteFeedbackPkt.h"
 #include "D2DModeSelectionBase.h"
+#include "BatteryAccess.h"      //JINSERT Included battery access library
 
 Define_Module(LtePhyUeD2D);
 
@@ -69,6 +70,7 @@ void LtePhyUeD2D::handleAirFrame(cMessage* msg)
     if (useBattery_)
     {
         //TODO BatteryAccess::drawCurrent(rxAmount_, 0);
+        BatteryAccess::drawCurrent(rxAmount_, 0);
     }
     connectedNodeId_ = masterId_;
     LteAirFrame* frame = check_and_cast<LteAirFrame*>(msg);
@@ -237,9 +239,11 @@ void LtePhyUeD2D::doHandover()
 
 void LtePhyUeD2D::handleUpperMessage(cMessage* msg)
 {
-//    if (useBattery_) {
-//    TODO     BatteryAccess::drawCurrent(txAmount_, 1);
-//    }
+    // This useBattery_ verification was commented
+    if (useBattery_) {
+    //TODO     BatteryAccess::drawCurrent(txAmount_, 1);
+        BatteryAccess::drawCurrent(txAmount_, 1);
+    }
 
     UserControlInfo* lteInfo = check_and_cast<UserControlInfo*>(msg->removeControlInfo());
 

@@ -5630,3 +5630,9 @@ org.eclipse.core.internal.resources.ResourceException: Resource is out of sync w
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 !SUBENTRY 2 org.eclipse.core.resources 4 274 2018-04-15 13:29:37.451
 !MESSAGE Resource is out of sync with the file system: '/inet-framework-simulte-afd56c4/out/gcc-debug/src/apps/alert/AlertPacket_m.o'.
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-15 14:41:24.585
+!MESSAGE Indexed 'inet-framework-simulte-afd56c4' (150 sources, 613 headers) in 33.2 sec: 60,677 declarations; 186,166 references; 0 unresolved inclusions; 0 syntax errors; 17 unresolved names (0.0069%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-15 14:42:28.596
+!MESSAGE Indexed 'inet' (829 sources, 1,346 headers) in 63.8 sec: 188,032 declarations; 762,647 references; 0 unresolved inclusions; 8 syntax errors; 118 unresolved names (0.012%)

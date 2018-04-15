@@ -12,6 +12,7 @@
 #include "LteFeedbackPkt.h"
 #include "IP2lte.h"
 #include "LteDlFeedbackGenerator.h"
+#include "BatteryAccess.h" //JINSERT Included battery access library
 
 Define_Module(LtePhyUe);
 
@@ -48,7 +49,7 @@ void LtePhyUe::initialize(int stage)
         handoverDelta_ = 0.00001;
         handoverLatency_ = par("handoverLatency").doubleValue();
 
-        // disabled
+        // JINSERT it was disabled useBattery_ = false;
         useBattery_ = true;
 
         enableHandover_ = par("enableHandover");
@@ -76,12 +77,13 @@ void LtePhyUe::initialize(int stage)
         {
             // TODO register the device to the battery with two accounts, e.g. 0=tx and 1=rx
             // it only affects statistics
-            //registerWithBattery("LtePhy", 2);
-//            txAmount_ = par("batteryTxCurrentAmount");
-//            rxAmount_ = par("batteryRxCurrentAmount");
-//
-//            WATCH(txAmount_);
-//            WATCH(rxAmount_);
+            // JINSERT uncommented code.
+            registerWithBattery("LtePhy", 2);
+            txAmount_ = par("batteryTxCurrentAmount");
+            rxAmount_ = par("batteryRxCurrentAmount");
+
+            WATCH(txAmount_);
+            WATCH(rxAmount_);
         }
 
         txPower_ = ueTxPower_;
@@ -283,6 +285,8 @@ void LtePhyUe::handleAirFrame(cMessage* msg)
     if (useBattery_)
     {
         //TODO BatteryAccess::drawCurrent(rxAmount_, 0);
+        //JINSERT uncommented code.
+        BatteryAccess::drawCurrent(rxAmount_, 0);
     }
     connectedNodeId_ = masterId_;
     LteAirFrame* frame = check_and_cast<LteAirFrame*>(msg);
@@ -407,9 +411,10 @@ void LtePhyUe::handleAirFrame(cMessage* msg)
 
 void LtePhyUe::handleUpperMessage(cMessage* msg)
 {
-//    if (useBattery_) {
-//    TODO     BatteryAccess::drawCurrent(txAmount_, 1);
-//    }
+    //JINSERT uncommented code
+    if (useBattery_) {
+    TODO     BatteryAccess::drawCurrent(txAmount_, 1);
+    }
 
     UserControlInfo* lteInfo = check_and_cast<UserControlInfo*>(msg->getControlInfo());
     MacNodeId dest = lteInfo->getDestId();
@@ -443,27 +448,30 @@ void LtePhyUe::handleUpperMessage(cMessage* msg)
     LtePhyBase::handleUpperMessage(msg);
 }
 
-//void LtePhyUe::handleHostState(const HostState& state)  {
-//    /*
-//     * If a module is not using the battery, but it has a battery module,
-//     * battery capacity never decreases, neither at timeouts,
-//     * because a draw is never called and a draw amount for the device
-//     * is never set (devices[i].currentActivity stuck at -1). See simpleBattery.cc @ line 244.
-//     */
-//    if (state.get() == HostState::ACTIVE)
-//        return;
-//
-//    if (!useBattery_ && state.get() == HostState::FAILED) {
-//        EV << "Warning: host state failed at node " << getName() << " while not using a battery!";
-//        return;
-//    }
-//
-//    if (state.get() == HostState::FAILED) {
-//        //depleted battery
-//        EV << "Battery depleted at node" << getName() << " with id " << getId();
-//        //TODO: stop sending and receiving messages or just collect statistics?
-//    }
-//}
+
+//JINSERT This handleHostState function was commented until next mark
+void LtePhyUe::handleHostState(const HostState& state)  {
+    /*
+     * If a module is not using the battery, but it has a battery module,
+     * battery capacity never decreases, neither at timeouts,
+     * because a draw is never called and a draw amount for the device
+     * is never set (devices[i].currentActivity stuck at -1). See simpleBattery.cc @ line 244.
+     */
+    if (state.get() == HostState::ACTIVE)
+        return;
+
+    if (!useBattery_ && state.get() == HostState::FAILED) {
+        EV << "Warning: host state failed at node " << getName() << " while not using a battery!";
+        return;
+    }
+
+    if (state.get() == HostState::FAILED) {
+        //depleted battery
+        EV << "Battery depleted at node" << getName() << " with id " << getId();
+        //TODO: stop sending and receiving messages or just collect statistics?
+    }
+}
+//JINSERT This handleHostState function was commented until here
 
 double LtePhyUe::updateHysteresisTh(double v)
 {
