@@ -1,11 +1,8 @@
-15:17:39 **** Incremental Build of configuration gcc-debug for project inet-framework-simulte-afd56c4 ****
+21:16:33 **** Incremental Build of configuration gcc-debug for project inet-framework-simulte-afd56c4 ****
 make MODE=debug CONFIGNAME=gcc-debug -j4 all 
 cd src && make
 make[1]: Entering directory '/home/joelias/Dropbox/UFF/Pesquisa/lte-battery/inet-framework-simulte-afd56c4/src'
-stack/phy/layer/LtePhyUe.cc
-stack/phy/layer/LtePhyUeD2D.cc
-Creating shared library: ../out/gcc-debug/src/libinet-framework-simulte-afd56c4.so
 make[1]: Leaving directory '/home/joelias/Dropbox/UFF/Pesquisa/lte-battery/inet-framework-simulte-afd56c4/src'
 
-15:17:52 Build Finished (took 13s.309ms)
+21:16:33 Build Finished (took 79ms)
 

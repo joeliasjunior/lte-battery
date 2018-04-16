@@ -20,6 +20,11 @@ import inet.transportlayer.tcp.TCP;
 import inet.transportlayer.udp.UDP;
 import lte.stack.phy.LteNicUe;
 import lte.stack.phy.LteNicUeD2D;
+import lte.battery.SimpleBattery;
+import lte.battery.BatteryStats;
+import lte.battery.utils.Subscriber;
+//import lte.battery.utils.DeviceDuty;
+//import lte.battery.utils.DeviceDutySimple;
 
 // 
 // User Equipment Module
@@ -51,6 +56,14 @@ module Ue
         string routingTableType = default("IPv4RoutingTable");
         *.interfaceTableModule = default(absPath(".interfaceTable"));
         *.routingTableModule = default(absPath(".routingTable"));
+        
+        //# Battery // JINSERT adding battery module
+        //@class(DeviceDutySimple);
+		bool debug = default(false);
+        volatile double period @unit(s);
+        volatile double dutyCycle;
+        volatile double current;
+        volatile double wakeup;
 
     gates:
         input radioIn @directIn;     // connection to master
@@ -96,6 +109,17 @@ module Ue
             parameters:
                 @display("p=250,258");
         }
+        // JINSERT adding battery module
+        battery: SimpleBattery {
+            parameters:
+                numDevices = default(1);
+                @display("p=45,40;b=30,25");
+        } 
+        // JINSERT adding battery module stats
+        batteryStats: BatteryStats {
+            @display("p=131,40");
+        }
+        
     connections allowunconnected:
         //# 
         //# Internal TCP/UDP applications connections with IP stack

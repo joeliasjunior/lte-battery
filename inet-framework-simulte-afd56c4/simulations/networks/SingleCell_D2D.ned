@@ -21,7 +21,6 @@ import lte.corenetwork.nodes.eNodeB;
 import lte.world.radio.LteChannelControl;
 import lte.epc.PgwStandardSimplified;
 
-
 network SingleCell_D2D
 {
     parameters:
@@ -65,6 +64,7 @@ network SingleCell_D2D
         ueD2DRx[numUeD2DRx]: Ue {
             @display("p=544,299");
         }
+        
     connections:
         server.pppg++ <--> Eth10G <--> router.pppg++;
         router.pppg++ <--> Eth10G <--> pgw.filterGate;
