@@ -33,7 +33,7 @@
  *
  * @ingroup power
  */
-//class HostState : public cObject
+//JINSERT class HostState : public cObject
 class HostState : public omnetpp::cObject
 {
     public:

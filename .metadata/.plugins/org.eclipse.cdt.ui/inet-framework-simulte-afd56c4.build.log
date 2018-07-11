@@ -1,8 +1,537 @@
-21:16:33 **** Incremental Build of configuration gcc-debug for project inet-framework-simulte-afd56c4 ****
+01:35:09 **** Build of configuration gcc-debug for project inet-framework-simulte-afd56c4 ****
 make MODE=debug CONFIGNAME=gcc-debug -j4 all 
 cd src && make
 make[1]: Entering directory '/home/joelias/Dropbox/UFF/Pesquisa/lte-battery/inet-framework-simulte-afd56c4/src'
+MSGC: apps/alert/AlertPacket.msg
+MSGC: apps/vod/VoDPacket.msg
+MSGC: apps/voip/VoipPacket.msg
+MSGC: apps/vod/M1Message.msg
+battery/BaseBattery.cc
+MSGC: common/LteControlInfo.msg
+MSGC: stack/phy/packet/AirFrame.msg
+MSGC: stack/phy/packet/LteAirFrame.msg
+battery/BaseModule.cc
+common/lterecorder.cc
+common/LteCommon.cc
+common/LteControlInfo.cc
+MSGC: common/timer/TMultiTimerMsg.msg
+MSGC: common/timer/TTimerMsg.msg
+corenetwork/binder/LteBinder.cc
+corenetwork/binder/PhyPisaData.cc
+corenetwork/deployer/LteDeployer.cc
+corenetwork/lteip/InternetQueue.cc
+corenetwork/lteip/LteIp.cc
+MSGC: x2/packet/LteX2Message.msg
+MSGC: x2/packet/X2ControlInfo.msg
+corenetwork/nodes/InternetMux.cc
+corenetwork/nodes/UnUuMux.cc
+corenetwork/nodes/ExtCell.cc
+epc/gtp_common.cc
+epc/TrafficFlowFilter.cc
+epc/TrafficFlowFilterSimplified.cc
+epc/gtp/TftControlInfo.cc
+MSGC: epc/gtp/GtpUserMsg.msg
+stack/compManager/LteCompManagerBase.cc
+stack/compManager/compManagerProportional/LteCompManagerProportional.cc
+MSGC: stack/d2dModeSelection/D2DModeSwitchNotification.msg
+stack/d2dModeSelection/d2dModeSelectionBestCqi/D2DModeSelectionBestCqi.cc
+epc/TrafficFlowFilterSimplified.cc: In member function 'EpcNodeType TrafficFlowFilterSimplified::selectOwnerType(const char*)':
+epc/TrafficFlowFilterSimplified.cc:41:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+stack/handoverManager/LteHandoverManager.cc
+stack/mac/allocator/LteAllocationModule.cc
+stack/mac/amc/LteAmc.cc
+stack/mac/amc/AmcPilotAuto.cc
+stack/mac/amc/LteMcs.cc
+stack/mac/amc/AmcPilotAuto.cc: In member function 'virtual const UserTxParams& AmcPilotAuto::computeTxParams(MacNodeId, Direction)':
+stack/mac/amc/AmcPilotAuto.cc:81:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for(; bandIt < usableB->size(); ++bandIt)
+                          ^
+stack/mac/amc/AmcPilotAuto.cc:122:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for(; bandIt < usableB->size(); ++bandIt)
+                          ^
+stack/mac/amc/AmcPilotAuto.cc: In member function 'virtual void AmcPilotAuto::setUsableBands(MacNodeId, UsableBands)':
+stack/mac/amc/AmcPilotAuto.cc:181:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0 ; i<usableBands.size() ; ++i)
+                      ^
+In file included from stack/mac/amc/LteAmc.cc:15:0:
+stack/mac/amc/AmcPilotD2D.h: In member function 'virtual std::vector<short unsigned int> AmcPilotD2D::getMultiBandCqi(MacNodeId, Direction)':
+stack/mac/amc/AmcPilotD2D.h:54:82: warning: no return statement in function returning non-void [-Wreturn-type]
+     virtual std::vector<Cqi>  getMultiBandCqi(MacNodeId id, const Direction dir){}
+                                                                                  ^
+stack/mac/amc/AmcPilotD2D.h: In member function 'virtual UsableBands* AmcPilotD2D::getUsableBands(MacNodeId)':
+stack/mac/amc/AmcPilotD2D.h:56:55: warning: no return statement in function returning non-void [-Wreturn-type]
+     virtual UsableBands* getUsableBands(MacNodeId id){}
+                                                       ^
+stack/mac/amc/AmcPilotD2D.cc
+In file included from stack/mac/amc/AmcPilotD2D.cc:10:0:
+stack/mac/amc/AmcPilotD2D.h: In member function 'virtual std::vector<short unsigned int> AmcPilotD2D::getMultiBandCqi(MacNodeId, Direction)':
+stack/mac/amc/AmcPilotD2D.h:54:82: warning: no return statement in function returning non-void [-Wreturn-type]
+     virtual std::vector<Cqi>  getMultiBandCqi(MacNodeId id, const Direction dir){}
+                                                                                  ^
+stack/mac/amc/AmcPilotD2D.h: In member function 'virtual UsableBands* AmcPilotD2D::getUsableBands(MacNodeId)':
+stack/mac/amc/AmcPilotD2D.h:56:55: warning: no return statement in function returning non-void [-Wreturn-type]
+     virtual UsableBands* getUsableBands(MacNodeId id){}
+                                                       ^
+MSGC: stack/rlc/packet/LteRlcPdu.msg
+stack/mac/amc/LteAmc.cc: In member function 'MacNodeId LteAmc::computeMuMimoPairing(MacNodeId, Direction)':
+stack/mac/amc/LteAmc.cc:511:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+stack/mac/buffer/LteMacBuffer.cc
+MSGC: stack/mac/packet/LteMacPdu.msg
+MSGC: stack/mac/packet/LteHarqFeedback.msg
+stack/mac/buffer/harq/LteHarqProcessTx.cc
+stack/mac/buffer/harq/LteHarqBufferRx.cc
+stack/mac/buffer/harq_d2d/LteHarqProcessRxD2D.cc
+stack/mac/buffer/harq_d2d/LteHarqProcessRxD2DMirror.cc
+stack/mac/buffer/harq_d2d/LteHarqBufferRxD2D.cc
+stack/mac/buffer/harq_d2d/LteHarqBufferTxD2D.cc
+stack/mac/buffer/harq_d2d/LteHarqProcessTxD2D.cc
+stack/mac/buffer/harq_d2d/LteHarqBufferRxD2DMirror.cc
+stack/mac/buffer/harq_d2d/LteHarqUnitTxD2D.cc
+stack/mac/layer/LteMacBase.cc
+stack/mac/layer/LteMacRelayEnb.cc
+MSGC: stack/mac/packet/LteSchedulingGrant.msg
+MSGC: stack/phy/packet/LteFeedbackPkt.msg
+MSGC: stack/mac/packet/LteRac.msg
+MSGC: stack/mac/packet/LteMacSduRequest.msg
+stack/mac/layer/LteMacRelayUe.cc
+stack/mac/layer/LteMacBase.cc: In member function 'virtual void LteMacBase::deleteQueues(MacNodeId)':
+stack/mac/layer/LteMacBase.cc:238:40: warning: 'bool omnetpp::cQueue::empty() const' is deprecated (declared at /home/joelias/omnetpp-5.0/include/omnetpp/cqueue.h:298) [-Wdeprecated-declarations]
+             while (!mit->second->empty())
+                                        ^
+stack/mac/layer/LteMacEnb.cc
+stack/mac/layer/LteMacUe.cc
+stack/mac/layer/LteMacEnbD2D.cc
+stack/mac/layer/LteMacUeD2D.cc
+stack/mac/layer/LteMacEnb.cc: In member function 'virtual void LteMacEnb::sendGrants(LteMacScheduleList*)':
+stack/mac/layer/LteMacEnb.cc:354:20: warning: unused variable 'lcid' [-Wunused-variable]
+         LogicalCid lcid = MacCidToLcid(cid);
+                    ^
+stack/mac/layer/LteMacUe.cc: In member function 'virtual void LteMacUe::deleteQueues(MacNodeId)':
+stack/mac/layer/LteMacUe.cc:706:36: warning: 'bool omnetpp::cQueue::empty() const' is deprecated (declared at /home/joelias/omnetpp-5.0/include/omnetpp/cqueue.h:298) [-Wdeprecated-declarations]
+         while (!mit->second->empty())
+                                    ^
+In file included from stack/mac/layer/LteMacEnbD2D.cc:23:0:
+stack/mac/amc/AmcPilotD2D.h: In member function 'virtual std::vector<short unsigned int> AmcPilotD2D::getMultiBandCqi(MacNodeId, Direction)':
+stack/mac/amc/AmcPilotD2D.h:54:82: warning: no return statement in function returning non-void [-Wreturn-type]
+     virtual std::vector<Cqi>  getMultiBandCqi(MacNodeId id, const Direction dir){}
+                                                                                  ^
+stack/mac/amc/AmcPilotD2D.h: In member function 'virtual UsableBands* AmcPilotD2D::getUsableBands(MacNodeId)':
+stack/mac/amc/AmcPilotD2D.h:56:55: warning: no return statement in function returning non-void [-Wreturn-type]
+     virtual UsableBands* getUsableBands(MacNodeId id){}
+                                                       ^
+stack/mac/layer/LteMacUeD2D.cc: In member function 'virtual void LteMacUeD2D::macPduMake(LteMacScheduleList*)':
+stack/mac/layer/LteMacUeD2D.cc:431:43: warning: 'bool omnetpp::cQueue::empty() const' is deprecated (declared at /home/joelias/omnetpp-5.0/include/omnetpp/cqueue.h:298) [-Wdeprecated-declarations]
+                 if (mbuf_[destCid]->empty())
+                                           ^
+stack/mac/layer/LteMacUeD2D.cc: In member function 'void LteMacUeD2D::macHandleD2DModeSwitch(omnetpp::cPacket*)':
+stack/mac/layer/LteMacUeD2D.cc:666:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                         for (int proc = 0; proc < (unsigned int) UE_TX_HARQ_PROCESSES; proc++)
+                                                 ^
+stack/mac/layer/LteMacUeD2D.cc:714:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
+         MacCid cid;
+                ^
+stack/mac/scheduler/LcgSchedulerRealistic.cc
+stack/mac/scheduler/LcgSchedulerRealistic.cc:196:90: warning: "/*" within comment [-Wcomment]
+                 if ((toServe <= availableBytes) /*&& ( !priorityService || ( sduSize <= 0/*TODO desc->parameters_.bucket_) )*/)
+ ^
+stack/mac/scheduler/LteSchedulerUeUl.cc
+stack/mac/scheduler/LteSchedulerEnb.cc
+stack/mac/scheduler/LteSchedulerEnbDl.cc
+stack/mac/scheduler/LcgSchedulerRealistic.cc: In member function 'virtual ScheduleList& LcgSchedulerRealistic::schedule(unsigned int, Direction)':
+stack/mac/scheduler/LcgSchedulerRealistic.cc:38:15: warning: variable 'timeInterval' set but not used [-Wunused-but-set-variable]
+     simtime_t timeInterval = NOW - lastExecutionTime_;
+               ^
+stack/mac/scheduler/LcgSchedulerRealistic.cc:42:9: warning: unused variable 'lowestBackloggedFlow' [-Wunused-variable]
+     int lowestBackloggedFlow = -1;
+         ^
+stack/mac/scheduler/LcgSchedulerRealistic.cc:43:9: warning: unused variable 'lowestBackloggedPriority' [-Wunused-variable]
+     int lowestBackloggedPriority = -1;
+         ^
+stack/mac/scheduler/LcgSchedulerRealistic.cc:47:9: warning: unused variable 'highestBackloggedFlow' [-Wunused-variable]
+     int highestBackloggedFlow = -1;
+         ^
+stack/mac/scheduler/LcgSchedulerRealistic.cc:48:9: warning: unused variable 'highestBackloggedPriority' [-Wunused-variable]
+     int highestBackloggedPriority = -1;
+         ^
+stack/mac/scheduler/LcgScheduler.cc
+stack/mac/scheduler/LteSchedulerEnbDlRealistic.cc
+In file included from stack/mac/scheduler/LteSchedulerEnbDl.cc:12:0:
+stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
+stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
+         MacCid cid;
+                ^
+In file included from stack/mac/scheduler/LteSchedulerEnb.cc:12:0:
+stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
+stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
+         MacCid cid;
+                ^
+stack/mac/scheduler/LteSchedulerEnb.cc: In member function 'ActiveSet LteSchedulerEnb::readActiveConnections()':
+stack/mac/scheduler/LteSchedulerEnb.cc:934:12: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
+     MacCid cid;
+            ^
+stack/mac/scheduler/LteSchedulerEnbUl.cc
+In file included from stack/mac/scheduler/LteSchedulerEnbDlRealistic.cc:11:0:
+stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
+stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
+         MacCid cid;
+                ^
+stack/mac/scheduler/LteScheduler.cc
+stack/mac/scheduling_modules/LteMaxCiOptMB.cc
+stack/mac/scheduling_modules/LteMaxCiComp.cc
+In file included from stack/mac/scheduler/LteScheduler.cc:10:0:
+stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
+stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
+         MacCid cid;
+                ^
+In file included from stack/mac/scheduling_modules/LteMaxCiOptMB.h:11:0,
+                 from stack/mac/scheduling_modules/LteMaxCiOptMB.cc:14:
+stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
+stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
+         MacCid cid;
+                ^
+In file included from stack/mac/scheduling_modules/LteMaxCiComp.h:13:0,
+                 from stack/mac/scheduling_modules/LteMaxCiComp.cc:10:
+stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
+stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
+         MacCid cid;
+                ^
+stack/mac/scheduling_modules/LteMaxCi.cc
+stack/mac/scheduling_modules/LteDrr.cc
+stack/mac/scheduling_modules/LtePf.cc
+In file included from stack/mac/scheduling_modules/LteMaxCi.h:13:0,
+                 from stack/mac/scheduling_modules/LteMaxCi.cc:10:
+stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
+stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
+         MacCid cid;
+                ^
+stack/mac/scheduling_modules/LteMaxCiMultiband.cc
+In file included from stack/mac/scheduling_modules/LteDrr.h:14:0,
+                 from stack/mac/scheduling_modules/LteDrr.cc:10:
+stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
+stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
+         MacCid cid;
+                ^
+In file included from stack/mac/scheduling_modules/LteMaxCiMultiband.h:11:0,
+                 from stack/mac/scheduling_modules/LteMaxCiMultiband.cc:10:
+stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
+stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
+         MacCid cid;
+                ^
+In file included from stack/mac/scheduling_modules/LtePf.h:13:0,
+                 from stack/mac/scheduling_modules/LtePf.cc:10:
+stack/mac/scheduler/LteScheduler.h: In member function 'ActiveSet LteScheduler::readActiveSet()':
+stack/mac/scheduler/LteScheduler.h:158:16: warning: variable 'cid' set but not used [-Wunused-but-set-variable]
+         MacCid cid;
+                ^
+stack/mac/scheduling_modules/LteMaxCiMultiband.cc: In member function 'virtual void LteMaxCiMultiband::prepareSchedule()':
+stack/mac/scheduling_modules/LteMaxCiMultiband.cc:54:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for( ; band < vect.size() ; ++band )
+                     ^
+stack/pdcp_rrc/ConnectionsTable.cc
+MSGC: stack/pdcp_rrc/packet/LtePdcpPdu.msg
+stack/pdcp_rrc/layer/entity/LtePdcpEntity.cc
+stack/phy/ChannelModel/LteDummyChannelModel.cc
+MSGC: stack/rlc/packet/LteRlcSdu.msg
+stack/phy/ChannelModel/LteChannelModel.cc
+stack/phy/das/RemoteAntennaSet.cc
+stack/phy/das/DasFilter.cc
+stack/phy/feedback/LteFeedbackComputationDummy.cc
+stack/phy/feedback/LteFeedbackComputation.cc
+stack/phy/feedback/LteFeedbackComputationRealistic.cc
+stack/phy/feedback/LteFeedbackComputationDummy.cc: In member function 'void LteFeedbackComputationDummy::generateBaseFeedback(int, int, LteFeedback&, FeedbackType, int, RbAllocationType, TxMode)':
+stack/phy/feedback/LteFeedbackComputationDummy.cc:321:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (unsigned int z = 0; j < newCqi.size(); z++)
+                                        ^
+stack/phy/feedback/LteFeedback.cc
+stack/phy/feedback/LteDlFeedbackGenerator.cc
+stack/phy/feedback/testFeedback/FeedbackTester.cc
+stack/phy/layer/LtePhyEnbD2D.cc
+stack/phy/layer/LtePhyEnb.cc
+stack/phy/layer/LtePhyUe.cc
+stack/phy/layer/LtePhyRelay.cc
+stack/phy/layer/LtePhyBase.cc
+stack/phy/layer/LtePhyUeD2D.cc
+stack/phy/packet/LteFeedbackPkt.cc
+stack/phy/packet/LteAirFrame.cc
+stack/rlc/LteRlcMux.cc
+MSGC: stack/rlc/am/packet/LteRlcAmPdu.msg
+MSGC: stack/rlc/am/packet/LteRlcAmSdu.msg
+stack/rlc/am/packet/LteRlcAmPdu.cc
+MSGC: stack/rlc/packet/LteRlcDataPdu.msg
+stack/rlc/tm/LteRlcTm.cc
+stack/rlc/um/LteRlcUmRealistic.cc
+stack/rlc/um/LteRlcUmRealisticD2D.cc
+stack/rlc/am/packet/LteRlcAmPdu.cc: In member function 'virtual bool LteRlcAmPdu::isFirst()':
+stack/rlc/am/packet/LteRlcAmPdu.cc:57:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     return (firstSn == snoFragment);
+                     ^
+stack/rlc/am/packet/LteRlcAmPdu.cc: In member function 'virtual bool LteRlcAmPdu::isLast()':
+stack/rlc/am/packet/LteRlcAmPdu.cc:69:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     return (lastSn == snoFragment);
+                    ^
+stack/rlc/um/LteRlcUm.cc
+stack/rlc/um/buffer/UmFragbuf.cc
+stack/rlc/um/buffer/UmTxQueue.cc
+stack/rlc/um/buffer/UmRxQueue.cc
+stack/rlc/um/entity/UmTxEntity.cc
+stack/rlc/um/entity/UmRxEntity.cc
+world/radio/ChannelControl.cc
+stack/rlc/um/entity/UmTxEntity.cc: In member function 'void UmTxEntity::rlcPduMake(int)':
+stack/rlc/um/entity/UmTxEntity.cc:50:29: warning: 'bool omnetpp::cQueue::empty() const' is deprecated (declared at /home/joelias/omnetpp-5.0/include/omnetpp/cqueue.h:298) [-Wdeprecated-declarations]
+     while (!sduQueue_.empty() && pduLength > 0)
+                             ^
+stack/rlc/um/buffer/UmRxQueue.cc: In member function 'bool UmRxQueue::defragment(omnetpp::cPacket*)':
+stack/rlc/um/buffer/UmRxQueue.cc:43:20: warning: unused variable 'dir' [-Wunused-variable]
+     unsigned short dir = lteInfo->getDirection();
+                    ^
+stack/rlc/um/entity/UmRxEntity.cc: In member function 'void UmRxEntity::enque(omnetpp::cPacket*)':
+stack/rlc/um/entity/UmRxEntity.cc:101:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 int p = (shift < rxWindowDesc_.windowSize_) ? shift : rxWindowDesc_.windowSize_;
+                                ^
+stack/rlc/um/entity/UmRxEntity.cc: In member function 'void UmRxEntity::moveRxWindow(int)':
+stack/rlc/um/entity/UmRxEntity.cc:215:12: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (pos>rxWindowDesc_.windowSize_)
+            ^
+world/radio/LteChannelControl.cc
+world/radio/ChannelAccess.cc
+x2/LteX2Manager.cc
+x2/X2AppClient.cc
+x2/X2AppServer.cc
+apps/alert/AlertPacket_m.cc
+apps/vod/M1Message_m.cc
+apps/vod/VoDPacket_m.cc
+apps/voip/VoipPacket_m.cc
+common/LteControlInfo_m.cc
+common/timer/TMultiTimerMsg_m.cc
+common/timer/TTimerMsg_m.cc
+epc/gtp/GtpUserMsg_m.cc
+stack/d2dModeSelection/D2DModeSwitchNotification_m.cc
+stack/mac/packet/LteMacPdu_m.cc
+stack/mac/packet/LteRac_m.cc
+stack/mac/packet/LteSchedulingGrant_m.cc
+stack/mac/packet/LteHarqFeedback_m.cc
+stack/mac/packet/LteMacSduRequest_m.cc
+stack/pdcp_rrc/packet/LtePdcpPdu_m.cc
+stack/phy/packet/LteAirFrame_m.cc
+stack/phy/packet/LteFeedbackPkt_m.cc
+stack/phy/packet/AirFrame_m.cc
+stack/rlc/am/packet/LteRlcAmSdu_m.cc
+stack/rlc/am/packet/LteRlcAmPdu_m.cc
+stack/rlc/packet/LteRlcSdu_m.cc
+stack/rlc/packet/LteRlcDataPdu_m.cc
+stack/rlc/packet/LteRlcPdu_m.cc
+x2/packet/LteX2Message_m.cc
+x2/packet/X2ControlInfo_m.cc
+apps/alert/AlertSender.cc
+apps/alert/AlertReceiver.cc
+apps/vod/VoDUDPClient.cc
+apps/vod/VoDUDPServer.cc
+apps/voip/VoIPReceiver.cc
+apps/vod/VoDUDPClient.cc: In member function 'virtual void VoDUDPClient::receiveStream(VoDPacket*)':
+apps/vod/VoDUDPClient.cc:137:9: warning: unused variable 'seqNum' [-Wunused-variable]
+     int seqNum = msg->getFrameSeqNum();
+         ^
+apps/vod/VoDUDPClient.cc:139:9: warning: unused variable 'frameLength' [-Wunused-variable]
+     int frameLength = msg->getFrameLength();
+         ^
+apps/voip/VoIPSender.cc
+battery/BatteryAccess.cc
+apps/voip/VoIPReceiver.cc: In member function 'void VoIPReceiver::playout(bool)':
+apps/voip/VoIPReceiver.cc:117:18: warning: unused variable 'firstFrameId' [-Wunused-variable]
+     unsigned int firstFrameId = pPacket->getIDframe();
+                  ^
+battery/SimpleBattery.cc
+battery/BatteryStats.cc
+common/timer/TTimer.cc
+In file included from battery/BatteryAccess.cc:10:0:
+../../inet/src/inet/common/FindModule.h: In instantiation of 'static T inet::FindModule<T>::findSubModule(const omnetpp::cModule*) [with T = BaseBattery*]':
+battery/BatteryAccess.cc:30:41:   required from here
+../../inet/src/inet/common/FindModule.h:28:36: warning: 'omnetpp::cModule* omnetpp::cModule::SubmoduleIterator::operator()() const' is deprecated (declared at /home/joelias/omnetpp-5.0/include/omnetpp/cmodule.h:161) [-Wdeprecated-declarations]
+             cModule *const sub = i();
+                                    ^
+corenetwork/lteip/IP2lte.cc
+battery/SimpleBattery.cc: In member function 'virtual void SimpleBattery::initialize(int)':
+battery/SimpleBattery.cc:128:12: warning: unused variable 'host' [-Wunused-variable]
+   cModule *host = inet::getContainingNode(this); //JINSERT
+            ^
+In file included from battery/SimpleBattery.cc:27:0:
+../../inet/src/inet/common/FindModule.h: In instantiation of 'static T inet::FindModule<T>::findSubModule(const omnetpp::cModule*) [with T = BatteryStats*]':
+battery/SimpleBattery.cc:442:58:   required from here
+../../inet/src/inet/common/FindModule.h:28:36: warning: 'omnetpp::cModule* omnetpp::cModule::SubmoduleIterator::operator()() const' is deprecated (declared at /home/joelias/omnetpp-5.0/include/omnetpp/cmodule.h:161) [-Wdeprecated-declarations]
+             cModule *const sub = i();
+                                    ^
+epc/gtp/GtpUser.cc
+epc/gtp/GtpUserX2.cc
+epc/gtp/GtpUser.cc: In member function 'void GtpUser::handleFromUdp(GtpUserMsg*)':
+epc/gtp/GtpUser.cc:104:39: warning: unused variable 'nextTeid' [-Wunused-variable]
+     TunnelEndpointIdentifier oldTeid, nextTeid;
+                                       ^
+epc/gtp/GtpUserSimplified.cc
+stack/d2dModeSelection/D2DModeSelectionBase.cc
+epc/gtp/GtpUserSimplified.cc: In member function 'EpcNodeType GtpUserSimplified::selectOwnerType(const char*)':
+epc/gtp/GtpUserSimplified.cc:49:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+stack/mac/buffer/LteMacQueue.cc
+stack/mac/buffer/harq/LteHarqUnitTx.cc
+stack/mac/buffer/harq/LteHarqBufferTx.cc
+stack/mac/buffer/harq/LteHarqProcessRx.cc
+stack/mac/layer/LteMacEnbRealisticD2D.cc
+stack/mac/layer/LteMacUeRealisticD2D.cc
+stack/mac/layer/LteMacUeRealistic.cc
+stack/mac/layer/LteMacEnbRealistic.cc
+In file included from stack/mac/layer/LteMacEnbRealisticD2D.cc:14:0:
+stack/mac/amc/AmcPilotD2D.h: In member function 'virtual std::vector<short unsigned int> AmcPilotD2D::getMultiBandCqi(MacNodeId, Direction)':
+stack/mac/amc/AmcPilotD2D.h:54:82: warning: no return statement in function returning non-void [-Wreturn-type]
+     virtual std::vector<Cqi>  getMultiBandCqi(MacNodeId id, const Direction dir){}
+                                                                                  ^
+stack/mac/amc/AmcPilotD2D.h: In member function 'virtual UsableBands* AmcPilotD2D::getUsableBands(MacNodeId)':
+stack/mac/amc/AmcPilotD2D.h:56:55: warning: no return statement in function returning non-void [-Wreturn-type]
+     virtual UsableBands* getUsableBands(MacNodeId id){}
+                                                       ^
+stack/mac/layer/LteMacUeRealisticD2D.cc: In member function 'virtual void LteMacUeRealisticD2D::macPduMake()':
+stack/mac/layer/LteMacUeRealisticD2D.cc:207:43: warning: 'bool omnetpp::cQueue::empty() const' is deprecated (declared at /home/joelias/omnetpp-5.0/include/omnetpp/cqueue.h:298) [-Wdeprecated-declarations]
+                 if (mbuf_[destCid]->empty())
+                                           ^
+stack/mac/layer/LteMacUeRealisticD2D.cc: In member function 'void LteMacUeRealisticD2D::macHandleD2DModeSwitch(omnetpp::cPacket*)':
+stack/mac/layer/LteMacUeRealisticD2D.cc:847:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                         for (int proc = 0; proc < (unsigned int) UE_TX_HARQ_PROCESSES; proc++)
+                                                 ^
+stack/mac/layer/LteMacUeRealisticD2D.cc:858:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                         for (int proc = 0; proc < (unsigned int) UE_TX_HARQ_PROCESSES; proc++)
+                                                 ^
+stack/mac/layer/LteMacUeRealistic.cc: In member function 'virtual void LteMacUeRealistic::macPduMake()':
+stack/mac/layer/LteMacUeRealistic.cc:151:39: warning: 'bool omnetpp::cQueue::empty() const' is deprecated (declared at /home/joelias/omnetpp-5.0/include/omnetpp/cqueue.h:298) [-Wdeprecated-declarations]
+             if (mbuf_[destCid]->empty())
+                                       ^
+stack/mac/layer/LteMacUeRealistic.cc: In member function 'virtual void LteMacUeRealistic::handleUpperMessage(omnetpp::cPacket*)':
+stack/mac/layer/LteMacUeRealistic.cc:393:12: warning: unused variable 'cid' [-Wunused-variable]
+     MacCid cid = idToMacCid(lteInfo->getDestId(), lteInfo->getLcid());
+            ^
+stack/mac/layer/LteMacUeRealistic.cc: In member function 'virtual void LteMacUeRealistic::handleSelfMessage()':
+stack/mac/layer/LteMacUeRealistic.cc:490:29: warning: unused variable 'scheduleList' [-Wunused-variable]
+         LteMacScheduleList* scheduleList =NULL;
+                             ^
+stack/mac/layer/LteMacEnbRealistic.cc: In member function 'virtual void LteMacEnbRealistic::macSduRequest()':
+stack/mac/layer/LteMacEnbRealistic.cc:92:18: warning: unused variable 'cw' [-Wunused-variable]
+         Codeword cw = it->first.second;
+                  ^
+stack/pdcp_rrc/layer/LtePdcpRrcUeD2D.cc
+stack/pdcp_rrc/layer/LtePdcpRrc.cc
+stack/pdcp_rrc/layer/LtePdcpRrcEnbD2D.cc
+stack/phy/ChannelModel/LteRealisticChannelModel.cc
+stack/rlc/am/LteRlcAm.cc
+stack/rlc/am/buffer/AmTxQueue.cc
+stack/rlc/am/buffer/AmRxQueue.cc
+stack/rlc/am/buffer/AmTxQueue.cc: In member function 'void AmTxQueue::discard(int)':
+stack/rlc/am/buffer/AmTxQueue.cc:179:47: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if ((txWindowIndex < 0) || (txWindowIndex >= txWindowDesc_.windowSize_))
+                                               ^
+stack/rlc/am/buffer/AmTxQueue.cc:206:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         i < (txWindowDesc_.seqNum_ - txWindowDesc_.firstSeqNum_); ++i)
+           ^
+stack/rlc/am/buffer/AmTxQueue.cc: In member function 'void AmTxQueue::checkForMrw()':
+stack/rlc/am/buffer/AmTxQueue.cc:268:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < (txWindowDesc_.seqNum_ - txWindowDesc_.firstSeqNum_); ++i)
+                       ^
+stack/rlc/am/buffer/AmTxQueue.cc: In member function 'void AmTxQueue::moveTxWindow(int)':
+stack/rlc/am/buffer/AmTxQueue.cc:333:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         i < ((txWindowDesc_.seqNum_ - txWindowDesc_.firstSeqNum_)); ++i)
+           ^
+stack/rlc/am/buffer/AmTxQueue.cc:371:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         i < txWindowDesc_.windowSize_; ++i)
+           ^
+stack/rlc/am/buffer/AmTxQueue.cc: In member function 'void AmTxQueue::recvAck(int)':
+stack/rlc/am/buffer/AmTxQueue.cc:509:15: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (index >= txWindowDesc_.windowSize_)
+               ^
+stack/rlc/am/buffer/AmTxQueue.cc: In member function 'void AmTxQueue::recvCumulativeAck(int)':
+stack/rlc/am/buffer/AmTxQueue.cc:527:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if ((seqNum < txWindowDesc_.firstSeqNum_) || (seqNum < 0))
+                 ^
+stack/rlc/am/buffer/AmTxQueue.cc:542:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int i = 0; i <= (seqNum - txWindowDesc_.firstSeqNum_); ++i)
+                           ^
+stack/rlc/am/buffer/AmTxQueue.cc: In member function 'void AmTxQueue::pduTimerHandle(int)':
+stack/rlc/am/buffer/AmTxQueue.cc:609:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if ((index < 0) || (index >= txWindowDesc_.windowSize_))
+                               ^
+stack/rlc/am/buffer/AmTxQueue.cc: In member function 'void AmTxQueue::mrwTimerHandle(int)':
+stack/rlc/am/buffer/AmTxQueue.cc:665:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (mrwDesc_.lastMrw_ > sn)
+                           ^
+stack/rlc/am/buffer/AmRxQueue.cc: In member function 'void AmRxQueue::discard(int)':
+stack/rlc/am/buffer/AmRxQueue.cc:106:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if ((index < 0) || (index >= rxWindowDesc_.windowSize_))
+                               ^
+stack/rlc/am/buffer/AmRxQueue.cc: In member function 'void AmRxQueue::enque(LteRlcAmPdu*)':
+stack/rlc/am/buffer/AmRxQueue.cc:256:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     else if ((index >= rxWindowDesc_.windowSize_))
+                     ^
+stack/rlc/am/buffer/AmRxQueue.cc:264:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         if (tsn == rxWindowDesc_.seqNum_)
+                 ^
+stack/rlc/am/buffer/AmRxQueue.cc: In member function 'void AmRxQueue::checkCompleteSdu(int)':
+stack/rlc/am/buffer/AmRxQueue.cc:497:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = index + 1; i < (rxWindowDesc_.windowSize_); ++i)
+                               ^
+stack/rlc/am/buffer/AmRxQueue.cc: In member function 'void AmRxQueue::sendStatusReport()':
+stack/rlc/am/buffer/AmRxQueue.cc:562:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < rxWindowDesc_.windowSize_; ++i)
+                       ^
+stack/rlc/am/buffer/AmRxQueue.cc:598:24: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         if (cumulative < rxWindowDesc_.windowSize_)
+                        ^
+stack/rlc/am/buffer/AmRxQueue.cc: In member function 'int AmRxQueue::computeWindowShift() const':
+stack/rlc/am/buffer/AmRxQueue.cc:629:24: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for ( int i = 0; i < rxWindowDesc_.windowSize_; ++i)
+                        ^
+stack/rlc/am/buffer/AmRxQueue.cc: In member function 'void AmRxQueue::moveRxWindow(int)':
+stack/rlc/am/buffer/AmRxQueue.cc:652:12: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (pos>rxWindowDesc_.windowSize_)
+            ^
+stack/rlc/am/buffer/AmRxQueue.cc:684:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for ( int i = pos; i < rxWindowDesc_.windowSize_; ++i)
+                          ^
+stack/rlc/am/buffer/AmRxQueue.cc:660:9: warning: unused variable 'firstSeqNum' [-Wunused-variable]
+     int firstSeqNum=0;
+         ^
+stack/phy/ChannelModel/LteRealisticChannelModel.cc: In member function 'virtual std::vector<double> LteRealisticChannelModel::getSINR(LteAirFrame*, UserControlInfo*)':
+stack/phy/ChannelModel/LteRealisticChannelModel.cc:712:13: warning: variable 'eNbType' set but not used [-Wunused-but-set-variable]
+     EnbType eNbType;
+             ^
+stack/phy/ChannelModel/LteRealisticChannelModel.cc: In member function 'double LteRealisticChannelModel::computeExtCellPathLoss(double, MacNodeId)':
+stack/phy/ChannelModel/LteRealisticChannelModel.cc:2258:16: warning: unused variable 'mean' [-Wunused-variable]
+         double mean = 0;
+                ^
+stack/phy/ChannelModel/LteRealisticChannelModel.cc:2263:16: warning: unused variable 'time' [-Wunused-variable]
+         double time = 0;
+                ^
+stack/phy/ChannelModel/LteRealisticChannelModel.cc:2264:16: warning: unused variable 'space' [-Wunused-variable]
+         double space = 0;
+                ^
+stack/phy/ChannelModel/LteRealisticChannelModel.cc:2221:12: warning: unused variable 'movement' [-Wunused-variable]
+     double movement = .0;
+            ^
+stack/phy/ChannelModel/LteRealisticChannelModel.cc:2222:12: warning: variable 'speed' set but not used [-Wunused-but-set-variable]
+     double speed = .0;
+            ^
+stack/phy/ChannelModel/LteRealisticChannelModel.cc: In member function 'bool LteRealisticChannelModel::computeInCellD2DInterference(MacNodeId, MacNodeId, inet::Coord, MacNodeId, inet::Coord, bool, std::vector<double>*, Direction)':
+stack/phy/ChannelModel/LteRealisticChannelModel.cc:2424:18: warning: variable 'ltePhy_destId' set but not used [-Wunused-but-set-variable]
+     LtePhyBase * ltePhy_destId;
+                  ^
+stack/rlc/packet/LteRlcDataPdu.cc
+In file included from stack/phy/ChannelModel/LteRealisticChannelModel.cc:17:0:
+stack/phy/layer/LtePhyUe.h: In member function 'unsigned int LtePhyUe::getUsedRbs(Remote, Band)':
+stack/phy/layer/LtePhyUe.h:160:5: warning: control reaches end of non-void function [-Wreturn-type]
+     }
+     ^
+Creating shared library: ../out/gcc-debug/src/libinet-framework-simulte-afd56c4.so
 make[1]: Leaving directory '/home/joelias/Dropbox/UFF/Pesquisa/lte-battery/inet-framework-simulte-afd56c4/src'
 
-21:16:33 Build Finished (took 79ms)
+01:39:33 Build Finished (took 4m:24s.348ms)
 

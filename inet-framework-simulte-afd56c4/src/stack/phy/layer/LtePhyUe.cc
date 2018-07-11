@@ -78,10 +78,13 @@ void LtePhyUe::initialize(int stage)
             // TODO register the device to the battery with two accounts, e.g. 0=tx and 1=rx
             // it only affects statistics
             // JINSERT uncommented code.
-            BatteryAccess ba;
-            ba.registerWithBattery("LtePhy", 2);
-            txAmount_ = par("batteryTxCurrentAmount");
-            rxAmount_ = par("batteryRxCurrentAmount");
+           // BatteryAccess ba;
+           // ba.registerWithBattery("LtePhy", 2); //JINSERT testing battery's name
+           // ba.registerWithBattery("BatteryAccounts", 2);
+           // txAmount_ = par("batteryTxCurrentAmount"); JINSERT
+           // rxAmount_ = par("batteryRxCurrentAmount"); JINSERT
+            txAmount_ = 0.2;
+            rxAmount_ = 0.1;
 
             WATCH(txAmount_);
             WATCH(rxAmount_);

@@ -3,9 +3,7 @@
 
 #include <omnetpp.h>
 #include "BaseModule.h"
-
 #include "BatteryDefs.h"
-//#include "MiXiMDefs.h"
 #include "HostState.h"
 
 /**
@@ -32,11 +30,8 @@ public:
 	};
 
 protected:
-	/** @brief Stores the type of the amount.*/
-	int type;
-
-	/** @brief Stores the actual amount.*/
-	double value;
+	int type;       /** @brief Stores the type of the amount.*/
+	double value;   /** @brief Stores the actual amount.*/
 
 public:
 	/** @brief Initializes with passed type and value.*/
@@ -69,11 +64,9 @@ public:
  */
 class INET_API BaseBattery : public BaseModule {
 private:
-	/** @brief Copy constructor is not allowed.
-	 */
+	/** @brief Copy constructor is not allowed.	 */
 	BaseBattery(const BaseBattery&);
-	/** @brief Assignment operator is not allowed.
-	 */
+	/** @brief Assignment operator is not allowed.	 */
 	BaseBattery& operator=(const BaseBattery&);
 
 public:
@@ -114,12 +107,10 @@ public:
 	 *  the state-of-charge of the battery.  Do NOT use BatteryState
 	 *  interfaces, which should be used only by Battery Stats modules.
 	 */
-	/*@{*/
 	/** @brief get voltage (future support for non-voltage regulated h/w */
 	virtual double getVoltage() const = 0;
 	/** @brief current state of charge of the battery, relative to its
-	 * rated nominal capacity [0..1]
-	 */
+	 * rated nominal capacity [0..1]	 */
 	virtual double estimateResidualRelative() const = 0;
 	/** @brief current state of charge of the battery (mW-s) */
 	virtual double estimateResidualAbs() const = 0;
@@ -128,7 +119,4 @@ public:
 	/*@}*/
 };
 
-
-
 #endif
-

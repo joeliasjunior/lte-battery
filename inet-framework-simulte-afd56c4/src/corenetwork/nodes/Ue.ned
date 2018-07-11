@@ -22,7 +22,7 @@ import lte.stack.phy.LteNicUe;
 import lte.stack.phy.LteNicUeD2D;
 import lte.battery.SimpleBattery;
 import lte.battery.BatteryStats;
-import lte.battery.utils.Subscriber;
+//import lte.battery.utils.Subscriber;
 //import lte.battery.utils.DeviceDuty;
 //import lte.battery.utils.DeviceDutySimple;
 

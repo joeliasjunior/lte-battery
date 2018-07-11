@@ -19,10 +19,16 @@
  **************************************************************************/
 
 #include "BaseModule.h"
+#include "FindModule.h"
+
+#include <string>
+#include <iostream>
 
 #include <cassert>
-
-#include "FindModule.h"
+//#include "inet/common/ModuleAccess.h"   //JINSERT
+//#include "inet/common/lifecycle/NodeOperations.h"
+//#include "inet/common/lifecycle/NodeStatus.h"
+//#include "inet/common/NotifierConsts.h"
 
 // Could not initialize simsignal_t it here!? I got the POST_MODEL_CHANGE id!?
 const simsignalwrap_t BaseModule::catHostStateSignal = simsignalwrap_t(BATTERY_SIGNAL_HOSTSTATE_NAME);
@@ -49,11 +55,16 @@ BaseModule::BaseModule(unsigned stacksize)
  * inherited class!
  */
 void BaseModule::initialize(int stage) {
+    std::cout << "<<< BaseModule Initializando com stage: " << stage << endl;
     if (stage == 0) {
-    	notAffectedByHostState = 	hasPar("notAffectedByHostState")
-								 && par("notAffectedByHostState").boolValue();
+        cModule *host = inet::getContainingNode(this);
+    	notAffectedByHostState = hasPar("notAffectedByHostState") && par("notAffectedByHostState").boolValue();
         hasPar("debug") ? debug = par("debug").boolValue() : debug = true;
-        findHost()->subscribe(catHostStateSignal.initialize(), this);
+        //findHost()->subscribe(catHostStateSignal.initialize(), this); //original
+        //if (!host->isSubscribed(catHostStateSignal, this)) {
+            host->subscribe(catHostStateSignal, this); //original
+            std::cout << ">>> BaseModule Subscribing: catHostStateSignal # host: " << host << endl;
+        //}
     }
 }
 
@@ -66,18 +77,17 @@ void BaseModule::receiveSignal(cComponent */*source*/, simsignal_t signalID, cOb
 		}
 		else {
 		    throw cException("Got catHostStateSignal but obj was not a HostState pointer?");
-			//opp_warning("Got catHostStateSignal but obj was not a HostState pointer?"); //opp_warning deprecated
+			//JINSERT opp_warning("Got catHostStateSignal but obj was not a HostState pointer?"); //opp_warning deprecated
 		}
 	}
 }
 
-void BaseModule::handleHostState(const HostState& state)
-{
+void BaseModule::handleHostState(const HostState& state){
 	if(notAffectedByHostState)
 		return;
 
 	if(state.get() != HostState::ACTIVE) {
-	    //opp_warning("Hosts state changed to something else than active which"
+	    //JINSERT opp_warning("Hosts state changed to something else than active which"
 	    throw cException("Hosts state changed to something else than active which"
 			  " is not handled by this module. Either handle this state"
 			  " correctly or if this module really isn't affected by the"
@@ -114,6 +124,7 @@ const cModule* BaseModule::findHost(void) const
  * @return logging name of module id or NULL if not found
  * @sa logName
  */
+//JINSERT a funcao seguinte estava comentada no codigo original
 //std::string BaseModule::getLogName(int id)
 //{
 //    BaseModule *mod;
@@ -127,6 +138,7 @@ const cModule* BaseModule::findHost(void) const
 //    }
 //    return lname;
 //};
+
 std::string BaseModule::logName(void) const
 {
 	std::ostringstream ost;
@@ -143,4 +155,3 @@ std::string BaseModule::logName(void) const
 	}
 	return ost.str();
 }
-

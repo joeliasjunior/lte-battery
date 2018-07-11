@@ -25,13 +25,15 @@
 #define BATTERY_SIMULTE
 #endif
 
+//JINSERT todos comentarios abaixo inseridos por mim
 //#define BATTERY_SIGNAL_PACKET_NAME          "org.mixim.modules.utility.packet"
 //#define BATTERY_SIGNAL_UWBIRPACKET_NAME     "org.mixim.modules.utility.uwbirpacket"
 //#define BATTERY_SIGNAL_DROPPEDPACKET_NAME   "org.mixim.modules.utility.droppedpacket"
 //#define BATTERY_SIGNAL_PASSEDMSG_NAME       "org.mixim.base.utils.passedmsg"
-#define BATTERY_SIGNAL_HOSTSTATE_NAME       "lte.battery.hoststate"
+//#define BATTERY_SIGNAL_HOSTSTATE_NAME       "lte.battery.hoststate" //JINSERT
+#define BATTERY_SIGNAL_HOSTSTATE_NAME       "HostState.h"
 //#define BATTERY_SIGNAL_MOBILITY_CHANGE_NAME "mobilityStateChanged"
-#define BATTERY_SIGNAL_BATTERY_CHANGE_NAME  "lte.battery.batterystate"
+#define BATTERY_SIGNAL_BATTERY_CHANGE_NAME  "BatteryState.h" //JINSERT
 //#define BATTERY_SIGNAL_MOBANMSG_NAME        "org.mixim.modules.utility.bbmobanmessage"
 
 #endif

@@ -124,7 +124,8 @@ void SimpleBattery::initialize(int stage) {
 		devices = new DeviceEntry[numDevices];
 		lastUpdateTime = simTime();
 
-		host = findHost();
+		//host = findHost(); JINSERT
+		cModule *host = inet::getContainingNode(this); //JINSERT
 	}
 	else if (stage == 1) {
 		hostState.set(HostState::ACTIVE);
@@ -351,7 +352,7 @@ void SimpleBattery::deductAndCheck() {
 		if (publishDelta < 1 || publishTime> 0) {
 			batteryState->set(0);
 			emit(BatteryStats::catBatteryStateSignal, batteryState);
-			// cancelEvent(publish);
+			//cancelEvent(publish);
 		}
 
 		// no more resolution-based timeouts

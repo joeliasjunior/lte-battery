@@ -21,7 +21,7 @@
  * @ingroup baseModules
  * @author Karl Wessel
  */
-//class BatteryAccess : public LtePhyBase
+//JINSERT class BatteryAccess : public LtePhyBase
 class BatteryAccess : public BaseModule
 {
     protected:

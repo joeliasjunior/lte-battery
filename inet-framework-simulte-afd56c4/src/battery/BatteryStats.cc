@@ -17,20 +17,23 @@
  *
  * BatteryStats' summary() and detail() methods are called by
  * Battery's finish() to format its table of device battery
- * consumption. (Methods shoud manage their own resources, since own
+ * consumption. (Methods should manage their own resources, since own
  * finish() may be done).
  *
  * For time series data it subscribes to BatteryState published by the
  * Battery.  Note: only BatteryStats should do this, all other modules
  * should use the Battery's estimateResidual() method (Battery Stats
- * does this as well, but for now estimate just follows redisual
+ * does this as well, but for now estimate just follows residual
  * capacity.)
  */
 #include "BatteryStats.h"
+
+#include <string>
 #include <iostream>
 
 #include "BatteryState.h"
 #include "DeviceEntry.h"
+#include "FindModule.h" //JINSERT
 
 Define_Module(BatteryStats);
 
@@ -38,8 +41,10 @@ const simsignalwrap_t BatteryStats::catBatteryStateSignal = simsignalwrap_t(BATT
 
 void BatteryStats::initialize(int stage)
 {
-  BaseModule::initialize(stage);
-  if (stage==0) {
+  std::cout << "<<< BatteryStats Initializando com stage: " << stage << endl;
+
+  // BaseModule::initialize(stage);
+  if (stage == 0) {
     doDetail = 0;
     doDetail = par("detail").boolValue();
     debugEV << "show details = " << doDetail << endl;
@@ -49,7 +54,14 @@ void BatteryStats::initialize(int stage)
     debugEV << "show timeSeries = " << doTimeSeries << endl;
 
     if (doTimeSeries) {
-      findHost()->subscribe(catBatteryStateSignal.initialize(), this);
+      //findHost()->subscribe(catBatteryStateSignal.initialize(), this);
+      cModule *host = inet::getContainingNode(this);
+
+    //  std::cout << "Listners of catBatteryStateSignal: " << host->getLocalSignalListeners(catBatteryStateSignal) << endl;
+     // if (!host->isSubscribed(catBatteryStateSignal, this)) {
+          std::cout << ">>> BatteryStats Subscribing: catBatteryStateSignal # host: " << host << endl;
+          host->subscribe(catBatteryStateSignal, this);
+      //}
 
       // suggest enabling only residualVec (omnetpp.ini), unless
       // others are of interest

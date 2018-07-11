@@ -23,8 +23,6 @@
 
 #include <sstream>
 #include <omnetpp.h>
-
-//#include "MiXiMDefs.h"
 #include "BatteryDefs.h"
 #include "HostState.h"
 #include "inet/common/NotifierConsts.h"
@@ -32,26 +30,27 @@
 #ifndef debugEV
 //#define debugEV_clear (ev.isDisabled()||!debug) ? ev : ev
 //#define debugEV (ev.isDisabled()||!debug) ? ev : ev << logName() << "::" << getClassName() << ": "
-// ev macro have been removed, so getEnvir() function will be used instead.
-//*/
+// JINSERT ev macro have been removed, so getEnvir() function will be used instead.
 #define debugEV_clear (!getEnvir()||!debug) ? EV : EV
 #define debugEV (!getEnvir()||!debug) ? EV : EV << logName() << "::" << getClassName() << ": "
 #endif
 
 #ifndef coreEV
-#define coreEV_clear (ev.isDisabled()||!coreDebug) ? ev : ev
-#define coreEV (ev.isDisabled()||!coreDebug) ? ev : ev << logName() << "::" << getClassName() <<": "
+//#define coreEV_clear (ev.isDisabled()||!coreDebug) ? ev : ev
+//#define coreEV (ev.isDisabled()||!coreDebug) ? ev : ev << logName() << "::" << getClassName() <<": "
+// JINSERT ev macro have been removed, so getEnvir() function will be used instead.
+#define coreEV_clear (!getEnvir()||!coreDebug) ? EV : EV
+#define coreEV (!getEnvir()||!coreDebug) ? EV : EV << logName() << "::" << getClassName() <<": "
 #endif
 
 /**
  * @brief Base class for all simple modules of a host.
  *
- * This method raises
- * an error if the host state changes to something else than ACTIVE.
- * Therefore that a sub-classing module can be used in a simulation
- * where the host state can change it has to override that method
- * which forces the author to make sure the module reacts well to
- * host state changes.
+ * This method raises an error if the host state changes to something
+ * else than ACTIVE. Therefore that a sub-classing module can be used
+ * in a simulation where the host state can change it has to override
+ * that method which forces the author to make sure the module reacts
+ * well to host state changes.
  * Alternatively one can also set a "notAffectedByHostState" parameter
  * of the module to true.
  *
@@ -65,10 +64,10 @@
  * There will never be a stand-alone BaseModule module.
  *
  * Note: most modules wont derive from BaseModule directly but from
- * its sub class "MiximBatteryAccess" which extends BaseModule by several
+ * its sub class "BatteryAccess" which extends BaseModule by several
  * methods for accessing the battery module.
  *
- * @see MiximBatteryAccess
+ * @see BatteryAccess
  *
  * @ingroup baseModules
  *
@@ -87,6 +86,7 @@ class BaseModule: public cSimpleModule, public cListener {
 
     /** @brief Stores the category of the HostState*/
     const static simsignalwrap_t catHostStateSignal;
+    const static simsignalwrap_t catBatteryStateSignal; //JINSERT
 protected:
 
     /**
@@ -127,6 +127,7 @@ private:
 
     BaseModule();
     BaseModule(unsigned stacksize);
+    //const static simsignalwrap_t catBatteryStateSignal;  //JINSERT
 
     /** @brief Basic initialization for all modules */
     virtual void initialize(int);

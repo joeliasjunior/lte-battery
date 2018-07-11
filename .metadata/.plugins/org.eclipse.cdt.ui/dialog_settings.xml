@@ -6,6 +6,17 @@
 		<item value="227191" key="searchFlags"/>
 		<item value="false" key="caseSensitive"/>
 		<list key="previousPatterns">
+			<item value="clListener"/>
+			<item value="FindModule"/>
+			<item value="hostsubscribe"/>
+			<item value="subscribe"/>
+			<item value="notAffectedByHostState"/>
+			<item value="JINSERT"/>
+			<item value="omnetpp::cRuntimeError"/>
+			<item value="omnetpp::cModule"/>
+			<item value="catBatteryStateSignal"/>
+			<item value="catHostStateSignalinitialize"/>
+			<item value="subscribecatBatteryStateSignalinitialize"/>
 			<item value="isDisabled"/>
 			<item value="isGUI"/>
 			<item value="passedmsg"/>
@@ -20,6 +31,10 @@
 			<item value="cMessage"/>
 			<item value="hoststate"/>
 		</list>
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
+		<item value="800" key="size.width"/>
+		<item value="162" key="size.height"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
 		<item value="388" key="DIALOG_WIDTH"/>

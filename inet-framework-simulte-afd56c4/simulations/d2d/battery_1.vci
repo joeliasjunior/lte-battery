@@ -1,15 +1,15 @@
                                                                 
 version 2
-run SinglePair-modeSwitching-UDP-0-20180415-21:16:49-19149
+run SinglePair-modeSwitching-UDP-0-20180708-01:39:36-29016
 attr configname SinglePair-modeSwitching-UDP
-attr datetime 20180415-21:16:49
+attr datetime 20180708-01:39:36
 attr experiment SinglePair-modeSwitching-UDP
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network lte.simulations.networks.SingleCell_D2D
-attr processid 19149
+attr processid 29016
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -100,4 +100,32 @@ vector 36  SingleCell_D2D.router.ppp[1].ppp  txState:vector  ETV
 attr interpolationmode  sample-hold
 attr title  "tx state, vector"
 vector 56  SingleCell_D2D.pgw.ppp[0].queue  queueLength:vector  ETV
-attr interpo
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 57  SingleCell_D2D.pgw.ppp[0].ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 67  SingleCell_D2D.pgw.pppInterface.queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 68  SingleCell_D2D.pgw.pppInterface.ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+vector 95  SingleCell_D2D.eNodeB.ppp.queue  queueLength:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "queue length, vector"
+vector 96  SingleCell_D2D.eNodeB.ppp.ppp  txState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx state, vector"
+8	4767 8 0 0 0 0 1 0 0 0 0
+9	4775 8 0 0 0 0 1 0 0 0 0
+24	4783 9 0 0 0 0 1 0 0 0 0
+25	4792 9 0 0 0 0 1 0 0 0 0
+35	4801 9 0 0 0 0 1 0 0 0 0
+36	4810 9 0 0 0 0 1 0 0 0 0
+56	4819 9 0 0 0 0 1 0 0 0 0
+57	4828 9 0 0 0 0 1 0 0 0 0
+67	4837 9 0 0 0 0 1 0 0 0 0
+68	4846 9 0 0 0 0 1 0 0 0 0
+95	4855 9 0 0 0 0 1 0 0 0 0
+96	4864 9 0 0 0 0 1 0 0 0 0
